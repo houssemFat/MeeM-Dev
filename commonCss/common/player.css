@@ -1,0 +1,122 @@
+#player_menu {
+	bottom: 0px;
+	width: 100% !important;
+	left: 0px;
+	right: 0px;
+	position: absolute;
+	opacity: 0.5;
+}
+.app-player-sub-controls {
+	padding-bottom: 9px;
+	margin-left: 4px;
+	font-size: 8px;
+	margin-top: auto;
+}
+.course-question-player-bull {
+	position: absolute;
+	left: 50%;
+	z-index: 2;
+}
+.course-question-player-bull-info {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	left: -6px;
+	position: relative;
+}
+.course-question-bull-info-on {
+	top: -25px;
+}
+.course-question-bull-tail-on {
+	top: -9px;
+	position: relative;
+}
+.course-question-bull-fault {
+	background-color: #990000;
+}
+.course-question-bull-success {
+	background-color: #007FB1;
+}
+.course-question-player-bull-tail {
+	width: 1px;
+	height: 9px;
+	left: 0px;
+}
+#player_progress_text {
+	margin-right: 5px;
+	margin-left: 8px;
+}
+#player_duration_text {
+	margin-left: 5px;
+}
+#player_volume_bg {
+	width: 10px;
+	background-color: #FFFFFF;
+	height: 50px;
+	bottom: 20px;
+	right: 10px;
+	position: absolute;
+	border: solid 1px #18BC9C;
+}
+#player_volume_icon {
+	top: 5px;
+	position: relative;
+	margin-left: 8PX;
+}
+#player_volume_fg {
+	width: 8px;
+	background-color: #18BC9C;
+	position: absolute;
+	bottom: 0px;
+}
+#player_play {
+	font-size: 85%;
+	width: 5%;
+}
+#player_progress_bg, #player_menu_play, .app-player-sub-controls {
+	display: inline-block;
+}
+#player_menu_play {
+	z-index: 1;
+	margin-right: 10px;
+	position: relative;
+	color: white;
+}
+#player_progress_bg {
+	background-color: #FFFFFF;
+	height: 10px;
+	width: 70% !important;
+	position: relative;
+	margin-top: 15px;
+}
+#player_progress {
+	background-color: #18BC9C;
+	height: 10px;
+}
+#player_menu_progress {
+	padding-bottom: 6px;
+	height: 40px;
+	background: rgba(226, 209, 209, 0.43);
+}
+.player-step-inside {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.player-step {
+	height: 15px;
+	position: absolute;
+	background-color: #000000;
+	width: 1px;
+}
+#player {
+	position: relative;
+}
+#player_volume_controller {
+	font-size: 25px;
+	position: relative;
+}
+#video_body {
+	position: relative;
+}

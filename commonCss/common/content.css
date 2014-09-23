@@ -1,0 +1,90 @@
+.chapter-progress-line{
+	background-color: orange;
+	position: absolute;
+	right: 0px;
+	height: 100%;
+}
+.chapter-progress{
+	position: relative;
+	background-color: #E5FFFA;
+	height: 25px;
+	width: 100%;
+}
+
+.question-results {
+	width : 200px;
+	height: 25px;
+	background-color: #E5FFFA;
+}
+.question-results span{
+	font-size: 20px;
+	font-family: "Blackadder ITC";
+	color: #FFFFFF;
+}
+.question-result-valid {
+	background-color: #18bc9c;
+}
+.question-result-fail {
+	background-color: red;
+}
+.question-result {
+	display: inline;
+	height: 40px;
+	float: left;
+	padding: 2px;
+}
+.question-response{
+	margin-bottom: 15px;
+}
+.question-response-label{
+	font-size: 30px;
+}
+.question-response-check {
+	height: 50px;
+	width: 56px;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+}
+.question-response-check-fail {
+	background-color: red;
+}
+.question-response-check-valid {
+	background-color: #18BC9C;
+}
+
+
+/* Question */
+.app-t-question-position{
+	width: 1px;
+	position: absolute;
+	width: 0px !important;
+	height: 0px !important;
+}
+/* Question */
+.app-t-question-position i{
+	position: relative;
+	left : -13px;
+}
+/* Question */
+.app-t-question-position-on{
+	color:#006081;
+	top: -28px;
+}
+.app-t-question-position-on i{
+	-webkit-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=6);
+}
+/* Question */
+.app-t-question-position-off{
+	color:#FFFF00;
+}
+.app-t-question-input{	
+	width: 100%;
+	max-width:400px;
+}
+.app-t-question-enabled{
+	color: green;
+}

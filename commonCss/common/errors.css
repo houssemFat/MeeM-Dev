@@ -1,0 +1,9 @@
+.errorlist{
+	list-style: none;
+	font-size: 15px;
+}
+.errorlist > li > .errorlist > li{
+	font-weight: bold;
+	font-family: "Arial Rounded MT Bold"
+	color: #C7254E ;
+}

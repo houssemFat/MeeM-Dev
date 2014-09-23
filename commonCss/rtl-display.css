@@ -1,0 +1,17 @@
+.collapse .navbar-nav{
+	float: left;
+}
+
+/* Meu course arrow */
+div.bhoechie-tab-menu div.list-group>a.active:after {
+	right: 100%;
+	border-right: 10px solid #5FCAB5;	
+  border-left: 0;
+}
+.custom-navbar-direction {
+	float:  left !important;
+}
+
+ul.wysihtml5-toolbar > li {
+	float: right !important;
+}
