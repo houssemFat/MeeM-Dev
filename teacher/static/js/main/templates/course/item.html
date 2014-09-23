@@ -1,0 +1,42 @@
+<div class="course">
+    <div class="course-img-content">
+        <img src="http://placehold.it/460x250/<%= bg %>/ffffff&text=<%= common.truncateString (title, 20, '...') %>" class="img-responsive" />
+        <span class="course-title"><b><%= common.truncateString (title, 20, '...') %></b>
+            <br />
+            <b><%= common.truncateString (short_description, 80, '...') %></b></span>
+    </div>
+    <div class="content">
+
+        <b id="edit" class="app-hand"><%= common.tr('last update')%>
+        <div class="date">
+            <i class="fa fa-calendar-o"></i>
+            <time datetime="<%= start_at %>">
+                <%= start_at %>
+            </time>
+            <br>
+            
+            <i class="fa fa-calendar"></i>
+            <time datetime="<%= end_at %>">
+                <%= end_at %>
+            </time>
+        </div>
+        <div>
+            <b><%=MMC.tr('progress')%></b></br>
+            <div class="progress">
+                <div data-percentage="<%=progress%>%" style="width: <%=progress%>%;background-color: #<%= bg %>" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="row app-course-item-menu">
+            <div class="pull-right">
+                <div class="btn-group">
+                    <a id="stats" href="#" class="btn"> <i class="fa fa-bar-chart-o"> </i> </a>
+                    <a id="view" href="#" class="btn"> <i class="fa fa-gear"> </i> </a>
+                    <a class="btn" id="classroom"> <%= common.tr('Students')%> <i class="fa fa-group"></i> <strong><b><%= std_count %> </b></huge> </a>
+                </div>
+            </div>
+            <div class="pull-left col-lg-offset-1">
+                 <a id="remove" class="btn btn-inverse btn-danger" href="course/<%=id%>/delete"> <i class="fa fa-trash-o"> </i> </a>
+            </div>
+        </div>
+    </div>
+</div>

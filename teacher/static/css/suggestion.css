@@ -1,0 +1,20 @@
+.app-t-suggestion-item{
+	border : solid 2px #007FB1;
+	border-radius: 4px;
+	margin-bottom: 5px; 
+}
+.app-t-suggestion-list {
+	padding-top: 5px;
+}
+.app-t-suggestion-item-drag{
+	background-color: #F8F8F8 !important;
+}
+.app-t-suggestion-item-drag *{
+	color: #FFFFFF;
+}
+.app-t-suggestion-dialog-helper {
+	z-index: 555555;
+}
+.app-t-suggestion-item-drop {
+	border-color: #CC0000 !important;
+}

@@ -1,0 +1,6 @@
+section#login_section .row:first-child .floating-label-form-group {
+	border-top: none !important;
+}
+section#login_section {
+	padding-bottom: 0px !important;
+}

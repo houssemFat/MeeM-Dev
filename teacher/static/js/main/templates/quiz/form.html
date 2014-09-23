@@ -1,0 +1,107 @@
+<form class="form-horizontal well">
+    <fieldset>
+        <legend class="text-center">
+            <%= MMC.tr('Quiz')%>
+        </legend>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="title"><%= MMC.tr('Title')%></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="title" id="about" placeholder="<%= MMC.tr('Title')%>" value="<%= about %>">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="explanation"><%= MMC.tr('Explanation')%></label>
+            <div class="col-sm-10">
+                <textarea  class="form-control" name="explanation" id="explanation" placeholder="<%= MMC.tr('Explanation')%>" ><%= explanation %></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label"><%= common.tr('start')%> *</label>
+            <div class="col-sm-4">
+                <div class="input-group" id="due_at_date_picker" data-date="<%= due_at %>" data-format="YYYY/MM/DD hh:mm">
+                    <input type="text" class="datatime-value" id="due_at">
+                </div>
+            </div>
+            <label class="col-sm-2 control-label"><%= common.tr('end')%> *</label>
+            <div class="col-sm-4">
+                <div class="input-group" id="end_at_date_picker" data-date="<%= end_at %>" data-format="YYYY/MM/DD hh:mm">
+                    <input type="text" class="datatime-value" id="end_at">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="form-group">
+            <label class="col-sm-2 control-label"><%= MMC.tr('Graduation')%></label>
+            <div class="col-sm-10">
+                <div class="text-center">
+                    <label class="col-sm-12" for="in_grade"><%= MMC.tr('included in graduation')%>
+                        <input type="checkbox" name="in-grade" id="in_grade" <% if (in_grade) { %>checked="checked"<% } %> class="form-control" >
+                    </label>
+
+                </div>
+                <div class="form-group" id="graduation_view">
+
+                    <div class="col-sm-3">
+                        <label class="col-sm-12 control-label" for="note"><%= MMC.tr('Note')%></label>
+                        <input type="text" <% if (!in_grade) { %>disabled="disabled"<% } %> class="form-control" name="note" id="note" placeholder="<%= MMC.tr('Note')%>" value="<%= note %>">
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="col-sm-12 control-label" for="max_attempts"><%= MMC.tr('Max Attempts')%></label>
+                        <input type="text" <% if (!is_timed) { %>disabled="disabled"<% } %> class="form-control" name="max-attempts" id="max_attempts" placeholder="<%= MMC.tr('Max Attempts')%>" value="<%= max_attempts %>">
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="col-sm-12" for="is_timed"><%= MMC.tr('With time')%>
+                            <input type="checkbox" <% if (is_timed) { %>checked="checked"<% } %> class="form-control" name="is-timed" id="is_timed" placeholder="<%= MMC.tr('Explanation')%>" value="<%= explanation %>">
+                        </label>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <label class="col-sm-12 control-label" for="duration"><%= MMC.tr('Duration')%></label>
+                        <input type="text" <% if (!is_timed) { %>disabled="disabled"<% } %> class="form-control" name="duration" id="duration" placeholder="<%= MMC.tr('Duration')%>" value="<%= duration %>">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="quiz_type"><%= MMC.tr('Display type')%></label>
+            <div class="col-sm-2">
+                <select class="form-control" name="display-type" id="display_type" placeholder="<%= MMC.tr('Display type')%>">
+                    <option value="0"  <% if (display_type == 0) { %>selected="selected"<% } %>  > <%= MMC.tr('List')%> </option>
+                    <option value="1" <% if (display_type == 1) { %>selected="selected"<% } %>> <%= MMC.tr('Slide')%> </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button  type="button" class="btn btn-success group-item save" data-release='false'>
+                    <span class="title">Create</span> <small> (release later) </small>
+                </button>
+                <button  type="button" class="btn btn-success group-item save" data-release='true'>
+                    <span class="title">Create</span> <span>and release Now</span>
+                </button>
+                <button  type="button" class="btn btn-default group-item" id="back_list" data-release='true'>
+                    <span class="title">List</span>
+                </button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<div class="col-md-12">
+    <!-- documents file -->
+    <legend>
+        Questions
+    </legend>
+    <div class="row" id="quizz_questions">
+        <ul class="list-group" id="list_view">
+
+        </ul>
+        <div class="text-center" id="list_empty" style="display: none">
+            <%= MMC.tr('list is empty')%>
+        </div>
+    </div>
+</div>

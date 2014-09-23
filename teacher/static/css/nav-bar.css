@@ -1,0 +1,57 @@
+nav {
+	/*background-color: #63B76C;*/
+}
+nav  a {
+	color : #FFFFFF !important;
+}
+nav  a:hover {
+	background-color: transparent !important;
+}
+nav form > input:focus {
+	/*border: solid 0px #63B76C !important;*/
+    outline: none;
+    padding-left: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 15px;
+    border-radius: 15px;	
+}
+@media (min-width: 1200px){
+	nav  .visible-lg {
+		display: inline-block !important;
+	}
+}
+.app-hover-list  ul {
+	position: absolute;
+	z-index: 1000;
+	left: 25px;
+	width: 80px;
+	min-width : 80px;
+	display: none;
+	text-align: left !important;
+	background-color: white !important;
+}
+.app-hover-list  ul a{
+	color: #5FCAB5;
+}
+.app-hover-list  ul hr{
+	 margin-top: 0px;
+	 margin-bottom: 0px;
+}
+.app-hover-list {
+	position: relative;
+}
+.app-hover-list li:hover > ul{
+	display: block;
+}
+
+.hover-list > ul > li {
+	color: #FFFFFF;
+}
+#top_nav_items {
+	background-color: #FFFFFF
+}   
+#top_nav_items > ul > li > a.active{
+	border-bottom: solid 8px;
+	padding-bottom: 7px;
+} 

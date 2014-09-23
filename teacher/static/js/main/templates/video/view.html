@@ -1,0 +1,73 @@
+<div class="panel panel-default app-thread">
+    <div class="panel-heading">
+        <span class="panel-title"><%= title %></span>
+        <div class="btn-group btn-group-sm pull-left">
+            <button id="edit" class="btn btn-default">
+                edit
+            </button>
+            <button id="add_script" class="btn btn-default">
+                <%= MMC.tr('add')%> <%= MMC.tr('Scenario')%>
+            </button>
+            <button id="add_file" class="btn btn-default">
+                <%= MMC.tr('add')%> <%= MMC.tr('Files')%>
+            </button>
+        </div>
+
+        <span class="row"><%= description %></span>
+    </div>
+    <div class="panel-body">
+        <div class="col-md-12 center-block">
+            <div class="col-md-12" id="home_video">
+                <video id="main_video" class="col-lg-12 col-md-12 video-js vjs-default-skin vjs-big-play-centered"
+                controls preload="auto" height="400" width="100%" style="width: 100%"
+                poster="http://video-js.zencoder.com/oceans-clip.png"
+                data-setup='{"example_option":true}'>
+
+                    <source src="<%= url %>" type='video/mp4'></source>
+                </video>
+            </div>
+            <div class="vjs-error-display">
+
+            </div>
+            <div class="pull-left">
+                <%= created.toString() %>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="panel-title"><%=title%></span>
+                <div class="btn-group btn-group-sm pull-left">
+                    <button class="btn btn-default" data-toggle="tab" href="#scenario">
+                        <%= common.tr('Scénario')%>
+                    </button>
+                    <button class="btn btn-default" data-toggle="tab" href="#files">
+                        <%= common.tr('Documents')%>
+                    </button>
+                    <button class="btn btn-default" data-toggle="tab" href="#comments">
+                        <%= common.tr('Comments')%>
+                    </button>
+                </div>
+            </div>
+            <div class="panel-body tab-content">
+                <div class="tab-pane fade active in" id="scenario">
+                    <div class="col-lg-12">
+                        <a href="/media/download/video/script/<%= description %>" id="scriptname"><%= scriptname %></a>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="files">
+                    <ul class="list-group" id="video_documents">
+
+                    </ul>
+                </div>
+
+                <div class="tab-pane fade" id="comments">
+                    <div id="comments_view">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="file" style="display:none" id="script_file"/>
+<input type="file" style="display:none" id="video_file"  multiple="multiple"/>

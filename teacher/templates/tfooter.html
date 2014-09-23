@@ -1,0 +1,65 @@
+{% load i18n  %}
+<div class="row">
+    <footer class="col-lg-12 col-md-12">
+        <div class="footer-langauges">
+            {% get_current_language as CURRENT %}
+            <ul class="list-inline list-unstyled list-group">
+                <li>
+                    <i class="fa fa-globe"> </i>
+                </li>
+                {% for lang in LANGUAGES  %}
+                <li  class="lang-select{% if lang.0 == CURRENT %} active-lang{% endif %}" value="{{ lang.0 }}">
+                    <a> {{ lang.1 }} </a>
+                </li>
+                {% endfor %}
+                <form id="change_lang" action="/i18n/setlang/" method="post" style="display: none">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ request.build_absolute_uri }}" />
+                    <input name="language">
+                </form>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <ul class="list-unstyled list-inline">
+                <li>
+                    <a href="/company/privacy">{% trans "Privacy" %}</a>
+                </li>
+                <li>
+                    <a href="/company/usage-terms">{% trans "Terms of Use" %}</a>
+                </li>
+                <li>
+                    <a href="/company/contact">{% trans "Contac us" %}</a>
+                </li>
+                <li>
+                    <a href="/company/business">{% trans "Business" %} </a>
+                </li>
+                <li>
+                    <a href="/company/team">{% trans "Hi" %} </a>
+                </li>
+                <li>
+                    <a  title="Github"><i class="fa fa-github-square fa-2x" style="
+                    color: #099297 !important;
+                    cursor: pointer;
+                    "></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-social-links">
+            <ul class="list-unstyled list-inline app-social-links">
+                <li>
+                    <a  title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                </li>
+                <li>
+                    <a  title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
+                </li>
+                <li>
+                    <a  title="Linkedin"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                </li>
+                <li>
+                    <a  title="G+"><i class="fa fa fa-google-plus-square fa-2x"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>

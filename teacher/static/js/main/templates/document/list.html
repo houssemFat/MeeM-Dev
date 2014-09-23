@@ -1,0 +1,67 @@
+<div class="panel panel-default app-thread">
+    <div class="panel-heading">
+        <div class="panel-title">
+            <div class="row">
+                <div class="col-xs-10">
+                    <span class="panel-title"><%= MMC.tr('Documents')%></span>
+                </div>
+                <div class="col-xs-2">
+                    <button id="add_document" class="btn btn-<% if (count >3) { %>default<% }else {%>danger<% }%> btn-sm">
+                        <i class="fa fa-file-text-o"> </i>
+                        <%= MMC.tr('add')%> <%= MMC.tr('Files')%>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group" id="list_view">
+
+        </ul>
+        <div class="text-center" id="list_empty" style="display: none">
+            <h1><%= common.tr ('Welcome!') %> </h1>
+            <div class="col-xs-12 col-sm-12 col-lg-6 col-lg-offset-3 col-xs-offset-3">
+                <div class="app-course-media-box">
+                    <div class="icon">
+                        <div class="image">
+                            <i class="fa fa-file"></i>
+                        </div>
+                        <div class="info">
+                            <p>
+                                ميم هو في مرحلة البداية، ليس لدينا ما يكفي من الموارد لتخزين وسائل الإعلام، والإنتاج الخاص بك وسوف يكون العام تحديد الرابط إلى الفيديو أو أي مزود آخر
+                            </p><h4 class="title"><%= MMC.tr('use a third party')%></h4>
+
+                            <ul class="list-group list-unstyled list-inline">
+                                <li>
+                                    <p>
+                                        <i class="fa fa-dropbox"></i> Drop Box
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <i class="fa fa-google-plus"></i> Google
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        ... others
+                                    </p>
+                                </li>
+                            </ul>
+                            <p>
+                                <a href="/company/usage-terms"><h6><small> <i class="fa fa-exclamation-circle"></i> <%=common.tr('video\'s content respect the policy')%></small></h6></a>
+                            </p>
+                            <button id="add_document" class="btn btn-<% if (count >3) { %>default<% }else {%>danger<% }%> btn-sm">
+                                <i class="fa fa-file-text-o"> </i>
+                                <%= MMC.tr('add')%> <%= MMC.tr('Files')%>
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="file" style="display:none" id="course_document"  multiple="multiple"/>

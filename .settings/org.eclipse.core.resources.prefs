@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//MeeMT/apps/books/courses.py=utf-8
+encoding//MeeMT/apps/courses/courses.py=utf-8
+encoding//MeeMT/apps/system/views.py=utf-8
+encoding//core/apps/inbox/views.py=utf-8
+encoding//core/apps/notifications/views.py=utf-8
+encoding//student/apps/courses/forum/views.py=utf-8
+encoding//student/apps/courses/views.py=utf-8
+encoding//teacher/apps/accounts/profile/helper.py=utf-8
+encoding//teacher/apps/courses/forum/threads/views.py=utf-8
+encoding//teacher/apps/courses/forum/views.py=utf-8
+encoding//teacher/apps/courses/helper.py=utf-8
+encoding//teacher/apps/courses/views.py=utf-8
+encoding/settings.py=utf-8

@@ -1,0 +1,45 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">
+            <div class="row">
+                <div class="col-xs-10">
+                    <span class="panel-title"><%= MMC.tr('Quizzes')%></span>
+                </div>
+                <div class="col-xs-2">
+                    <button class="btn btn-danger add-new btn-sm">
+                        <i class="fa fa-question"></i> <%= common.tr ('new exam') %>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group" id="list_view">
+
+        </ul>
+        <div class="text-center" id="list_empty">
+            <h1><%= common.tr ('Welcome!') %> </h1>
+            <div class="col-xs-12 col-sm-12 col-lg-6 col-lg-offset-3 col-xs-offset-3">
+                <div class="app-course-media-box">
+                    <div class="icon">
+                        <div class="image">
+                            <i class="fa fa-question"></i>
+                        </div>
+                        <div class="info">
+                            <p>
+                                تمكنك هذه الميزة في بناء الاختبارات.
+                                وهناك اختبار يمكن أن يكون اختياري (أو مسح) أو في التخرج، أن يكون لها تاريخ انتهاء وتاريخ الاستحقاق، فإنه لديها عدد من الأسئلة.
+                            </p>
+                            <button class="btn btn-danger add-new">
+                                <%= common.tr ('new exam') %>
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="space"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

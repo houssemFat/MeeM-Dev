@@ -1,0 +1,41 @@
+<form class="form-horizontal well">
+    <fieldset>
+        <legend class="text-center">
+            <%= common.tr('Chapter')%>
+            <% if (!isNew) {%>
+                <% if (released) {%>
+                <label  class="btn-success btn-released btn-released-on"> <%= common.tr('Released')%> <i class="fa fa-check-square-o"></i> </label>
+                <%} else {%>
+                <a  class="btn-danger btn btn-released-off" href="/chapter/<%= id %>/release"> <%= common.tr('Release ')%> </a>
+                <%}%>
+            <%}%>
+        </legend>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="title"><%= common.tr('Title')%></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="title" id="title" placeholder="<%= common.tr('Title')%>" value="<%= title %>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="about"><%= common.tr('About')%></label>
+            <div class="col-sm-10">
+                <textarea  class="form-control" name="about" id="about" placeholder="<%= common.tr('About')%>" ><%= about %></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="about"><%= common.tr('Released')%></label>
+
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button id="save" type="button" name="save" class="btn btn-success pull-left">
+                    <%= common.tr('Create')%>
+                </button>
+                <button id="cancel" type="button" name="cancel" class="btn btn-default pull-left">
+                    <%= common.tr('Cancel')%>
+                </button>
+            </div>
+        </div>
+    </fieldset>
+</form>

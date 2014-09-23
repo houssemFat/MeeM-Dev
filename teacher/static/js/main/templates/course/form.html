@@ -1,0 +1,109 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">
+            <div class="row">
+                <div class="col-xs-10">
+                    <h3 class="panel-title"> <%= common.tr('Course edit')%></h3>
+                </div>
+                <div class="col-xs-2">
+                    <button type="button" name="save" class="btn btn-success ">
+                        <%= common.tr('Create')%>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <!-- body -->
+    <div class="panel-body">
+        <div class="col-lg-12">
+            <form class="form-horizontal" id="course_form"  method="post">
+                <fieldset>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><%= common.tr('Title')%> *</label>
+                            <div class="col-sm-10">
+                                <input size="60" maxlength="255"
+                                class="form-control"
+                                name="Course[title]" id="title" value="<%= title %>" type="text">
+
+                            </div>
+
+                            <div class="text-danger app-error" id="error_title">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><%= common.tr('start')%> *</label>
+                            <div class="col-sm-4">
+                                <div class="input-group" id="start_at_date_picker" data-date="<%= start_at %>" data-format="YYYY/MM/DD hh:mm">
+                                    <input type="text" class="datatime-value" id="start_at">
+                                </div>
+                            </div>
+                            <label class="col-sm-2 control-label"><%= common.tr('end')%> *</label>
+                            <div class="col-sm-4">
+                                <div class="input-group" id="end_at_date_picker" data-date="<%= end_at %>" data-format="YYYY/MM/DD hh:mm">
+                                    <input type="text" class="datatime-value" id="end_at">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-danger app-error" id="error_date">
+
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><%= common.tr('about')%> *</label>
+                            <div class="col-sm-10">
+                                <textarea 
+                                class="form-control field" 
+                                name="Course[about]" id="about">
+                                        <h1>test ME</h1><img src="http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/jquery4u/2012/07/TinyEditor.jpg" /></textarea>
+                                <div class="text-danger app-error" id="error_about">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"><%= common.tr('social media links')%> *</label>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-facebook"></i></span>
+                                    <input class="form-control" id="facebook_link"/>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-twitter"></i></span>
+                                    <input class="form-control" id="twitter_link" type="text" placeholder="@twitter"/>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-google-plus"></i></span>
+                                    <input class="form-control" id="google_plus_link" />
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <small><%= common.tr('Whey this')%>.</small>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <p class="note">
+                    <small>(<span class="text-danger"> * </span>) <%= common.tr('Theses fields are required')%>.</small>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

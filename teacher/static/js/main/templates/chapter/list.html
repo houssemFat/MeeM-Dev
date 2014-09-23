@@ -1,0 +1,25 @@
+<div class="panel panel-default app-thread">
+    <div class="panel-heading">
+        <h3 class="panel-title"><%= common.tr ('List of') %>  <%= common.tr ('Chapters') %> </h3>
+        <div class="btn-group btn-group-sm pull-right">
+            <button class="btn btn-primary add-new">
+                <%= common.tr ('Add new chapter') %>
+            </button>
+        </div>
+        <span class="label label-info pull-left"><%=total%></span>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group" id="list_view">
+
+        </ul>
+        <div id="list_empty">
+            <div class="col-sm-6 col-sm-offset-3 text-center">
+                <h1><%= common.tr ('Welcome!') %> </h1>
+                <h3><%= MMC.tr('list is empty')%></h3>
+                <button class="btn btn-primary add-new">
+                    <%= common.tr ('Add new chapter') %>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

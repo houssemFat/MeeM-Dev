@@ -1,0 +1,7 @@
+#recievers{
+	border :none
+}
+#recievers:focus{
+	border :none !important;
+    outline: 0;
+}

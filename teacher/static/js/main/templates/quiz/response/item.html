@@ -1,0 +1,6 @@
+
+    <input type="text" id="response" value="<%= response %>" class="form-control" placeholder="Value">
+    <input type="checkbox" name="is-true" style="display: none" id="is_true" checked="false">
+    <span class="input-group-addon app-hand <% if (is_true) { %> success<%}else {%> default <%}%>" id="toggle"> <i class="fa fa-check"></i> </span>
+    <span class="input-group-addon app-hand" id="order"> <i class="fa fa-arrows-v"></i> </span>
+    <span class="input-group-addon app-hand danger" id="remove"> <i class="fa fa-times"></i> </span>

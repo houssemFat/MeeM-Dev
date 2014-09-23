@@ -1,0 +1,36 @@
+<div>
+    <div class="panel panel-default app-thread">
+        <div class="panel-heading">
+            <%= subject %>
+            <div class="pull-right action-buttons">
+                <div class="btn-group">
+            <i class="fa fa-cog  dropdown-toggle" data-toggle="dropdown"></i>
+                    <ul class="dropdown-menu slidedown">
+                        <li>
+                            <a href="http://www.jquery2dotnet.com"><span class="fa fa-pencil"></span>Edit</a>
+                        </li>
+                        <li>
+                            <a href="http://www.jquery2dotnet.com"><span class="fa fa-trash"></span>Delete</a>
+                        </li>
+                        <li>
+                            <a href="http://www.jquery2dotnet.com"><span class="fa fa-flag"></span>Flag</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="app-inbox-item-menu">
+                <%= author.name %>
+            </div>
+            <div class="app-inbox-view-subject">
+
+            </div>
+            <div class="app-inbox-view-body">
+                <%= body %>
+                <%= at %>
+            </div>
+        </div>
+
+    </div>
+</div>

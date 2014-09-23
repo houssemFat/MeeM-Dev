@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="col-md-12">
+        <div id="video_content">
+            <div id="video_player" class="video-player" class="app-relative">
+                <div id="video_body" >
+                    <div class="app-chapter-counter-container">
+                        <div class="app-chapter-counter">
+                            <span>45</span>
+                        </div>
+                    </div>
+                    <video poster="<%= poster %>" class="img-responsive" preload="auto">
+                      <source  src="<%= source %>" type="video/mp4"></source>
+                        "Navigator doesn't support html5"
+                    </video>
+                </div>
+                <div id="player_menu">
+                    <div id="player_menu_progress">
+                        <div id="player_menu_play" class="app-hand">
+                            <i class="fa fa-play" id="player_play"> </i>
+                        </div>
+                        <div id="player_progress_bg" class="app-hand">
+                            <div id="player_progress">
+
+                            </div>
+                        </div>
+                        <div class="app-player-sub-controls">
+                            <span id="player_progress_text"> </span>/ <span id="player_duration_text"> </span>
+                            <span id="player_volume_controller"> 
+                                <i  class="fa fa-volume-up app-hand" id="player_volume_icon"> </i>
+                                <div id="player_volume_bg" class="app-hand">
+                                    <div id="player_volume_fg">
+
+                                    </div>
+                                </div> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div style="text-align: right">
+        <h1 class="page-header"><strong>الاسئلة </strong> - <%= qcounts %> </h1>
+        <div  id="question_list">
+
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <h1 class="page-header"><strong> التعليقات </strong></h1>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <form role="form">
+                <div class="form-group col-xs-12 floating-label-form-group">
+                    <label for="comment"> </label>
+                    <textarea  placeholder="تعليق" class="form-control" type="password" 
+                                style="border: solid 1px #ccc !important;padding: 10px !important"
+                            name="comment" cols="12" rows="6"></textarea>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-group col-xs-12" style="padding-top: 20px;">
+                        <button type="submit" class="btn btn-lg btn-success pull-left">
+                            إرسال
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-8 col-lg-offset-2" id="comments_view">
+        </div> 
+    </div>
+</div>
+<div class="clearfix"></div>

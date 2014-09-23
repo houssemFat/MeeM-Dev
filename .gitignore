@@ -1,0 +1,20 @@
+# Created by http://www.gitignore.io
+
+#!! ERROR: djang is undefined. Use list command to see defined gitignore types !!#
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+secret.py

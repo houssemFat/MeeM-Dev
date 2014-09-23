@@ -1,0 +1,1 @@
+default_app_config = 'teacher.apps.apps.AppConfig'

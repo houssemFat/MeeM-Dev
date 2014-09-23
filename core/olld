@@ -1,0 +1,62 @@
+WSGIRequest: <WSGIRequest
+path:/static/t/js/main/main.js,
+GET:<QueryDict: {}>,
+POST:<QueryDict: {}>,
+COOKIES:{'_ga': 'GA1.4.371325815.1405050133',
+ 'csrftoken': 'OKHEzDaBAzE2dG7sOooNjP2SNjAz0q4f',
+ 'sessionid': 'pjdfgojcyadoy5j70wxzfd4uk7ywghmy'},
+META:{'ALLUSERSPROFILE': 'C:\\ProgramData',
+ 'APPDATA': 'C:\\Users\\dalinbm\\AppData\\Roaming',
+ 'ASL.LOG': 'Destination=file',
+ 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+ 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+ 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+ 'COMPUTERNAME': 'MAZEN',
+ 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe',
+ 'CONTENT_LENGTH': '',
+ 'CONTENT_TYPE': 'text/plain',
+ 'DJANGO_SETTINGS_MODULE': 'settings',
+ 'FP_NO_HOST_CHECK': 'NO',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HEROKUPATH': 'C:\\Program Files (x86)\\Heroku',
+ 'HOMEDRIVE': 'C:',
+ 'HOMEPATH': '\\Users\\dalinbm',
+ 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,
+  image/webp,*/*;q=0.8',
+ 'HTTP_ACCE...
+
+request Found at: django.contrib.staticfiles.views
+
+request
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+WSGIRequest: <WSGIRequest
+path:/static/t/js/main/main.js,
+GET:<QueryDict: {}>,
+POST:<QueryDict: {}>,
+COOKIES:{'_ga': 'GA1.4.371325815.1405050133',
+ 'csrftoken': 'OKHEzDaBAzE2dG7sOooNjP2SNjAz0q4f',
+ 'sessionid': 'pjdfgojcyadoy5j70wxzfd4uk7ywghmy'},
+META:{'ALLUSERSPROFILE': 'C:\\ProgramData',
+ 'APPDATA': 'C:\\Users\\dalinbm\\AppData\\Roaming',
+ 'ASL.LOG': 'Destination=file',
+ 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+ 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+ 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+ 'COMPUTERNAME': 'MAZEN',
+ 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe',
+ 'CONTENT_LENGTH': '',
+ 'CONTENT_TYPE': 'text/plain',
+ u'CSRF_COOKIE': u'OKHEzDaBAzE2dG7sOooNjP2SNjAz0q4f',
+ 'DJANGO_SETTINGS_MODULE': 'settings',
+ 'FP_NO_HOST_CHECK': 'NO',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HEROKUPATH': 'C:\\Program Files (x86)\\Heroku',
+ 'HOMEDRIVE': 'C:',
+ 'HOMEPATH': '\\Users\\dalinbm',
+ 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,ap...
+
+request Found at: core.apps.tools.static
+
+request

@@ -1,0 +1,24 @@
+.app-chapter-counter{
+	font-family: "Blackadder ITC";
+	color: #FFFFFF;
+	position: absolute;
+	left : 0px;
+}
+.app-chapter-counter span{
+	background-color: #EC971F;
+	padding: 10px;
+	font-size: 100px;
+}
+.app-chapter-counter-container {
+	position: relative;
+	width: 100%;
+}
+.course-view{
+	padding-top: 20px;
+}
+
+#list_comment_view{
+	margin-left : 10px;
+	border : solid 2px #006081 ;
+	padding: 20px;
+}

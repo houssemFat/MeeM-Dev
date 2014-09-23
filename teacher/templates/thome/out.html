@@ -1,0 +1,25 @@
+{% extends "tbase.html" %}
+{% block extrahead %}
+<script type="text/javascript">window.location.hash = '#';</script>
+{% endblock %}
+
+{% block custom-header %}
+{% include "thome/header-out.html" %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+<!-- bock endscripts -->
+{% block endscripts %}
+<script>
+    require(['app'], function(App) {
+        App.addInitializer(function() {
+            App.vent.trigger('webUser:welcome');
+        });
+    });
+
+</script>
+
+{% endblock %}
+

@@ -1,0 +1,71 @@
+{% extends "tbase.html" %}
+{% load i18n %}
+{% block extrahead %}
+<script src="{{ STATIC_URL }}js/vender/require/require.js" data-main="{{ STATIC_URL }}t/js/common/main.js"></script>
+{% endblock %}
+{% block custom-header %}
+{% include "thome/header-out.html" %}
+{% endblock %}
+{% block title %}{% trans "Login" %}{% endblock %}
+{% block content %}
+<div class="col-lg-10 col-lg-offset-1 col-md-12  text-center">
+    <div class="jumbotron">
+        <h1 class="text-center">LOGIN</h1>
+        <div class="row lead">
+            {% if form.errors %}
+            {% trans "Please correct the errors below." %}
+            <ul class="list-unstyled">
+                {% for field, errors in form.errors.items %}
+                {% for error in errors %}
+                <li>
+                    <p style="color: red;">
+                        <strong> {{ field }} </strong> : {{ error }}
+                    </p>
+                </li>
+                {% endfor %}
+                {% endfor %}
+            </ul>
+
+            {% endif %}
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <form action="/teacher/account/login/" class="form-inline" method="post" accept-charset="utf-8">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input name="email" class="form-control" placeholder="Email" maxlength="255" type="email">
+                    </div>
+                    <div class="form-group">
+                        <input name="password" class="form-control" placeholder="Password" type="password">
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" value="Sign in">
+                    </div>
+                    <div class="checkbox">
+                        <label for="login_remember">
+                            <input type="checkbox" name="remember" value="1" id="login_remember">
+                            Remember me</label>
+                    </div>
+                    {% if form.errors %}
+                    <div>
+                        <small><a  href="{% url 'teacher_account_reset_password'%}">{% trans "I forgot Password" %}</a></small>
+                    </div>
+
+                    {% endif %}
+                </form>
+
+            </div>
+            <div class="col-lg-3">
+                <p>
+                    <a class="btn btn-danger" href="{% url 'teacher_account_singup' %}" role="button">Sign up today</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+<!-- bock endscripts -->
+{% block endscripts %}
+
+{% endblock %}

@@ -1,0 +1,98 @@
+{% load i18n %}
+{% load custom_tags %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>{% block fulltitle %}{% block title %}{% endblock %} | ميم {% endblock %}</title>
+        <link rel="home" title="Home" href="/">
+        <link rel="shortcut icon" type="image/png" href="{{ BASE_HOST_URL }}ccss/img/favicon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ BASE_HOST_URL }}static/t/css/common.css">
+        {% include "tcss_custom.html" %}
+        <link rel="stylesheet" type="text/css" href="{{ BASE_HOST_URL }}ccss/common.css">
+        {% get_current_language as CURRENT %}
+        {% if CURRENT == "ar" %}
+        <link rel="stylesheet" type="text/css" href="{{ BASE_HOST_URL }}ccss/bootstrap-rtl.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ BASE_HOST_URL }}ccss/rtl-display.css">
+        {% else %}
+        <link rel="stylesheet" type="text/css" href="{{ BASE_HOST_URL }}ccss/ltr-display.css">
+        {% endif %}
+        <script src="/static/js/vender/modernizr/modernizr.js"></script>
+
+        <script>
+            __CONFIG__ = { {% get_teacher_js_global_vars %} ,
+                csrf : '{{ csrf_token }}',
+                baseUrl : '/teacher/'
+            };
+        </script>
+        <script src="{{ STATIC_URL }}js/config.js"></script>
+        <script src="{{ STATIC_URL }}js/vender/require/require.js" data-main="{{ STATIC_URL }}t/js/{% if not user.is_authenticated %}common{% else %}main{% endif %}/main.js"></script>
+
+        {% block extrahead %}
+        {% endblock %}
+        <script>
+            require(["{{ BASE_HOST_URL }}" + "static/js/locale/{{CURRENT}}.js"]);
+        </script>
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/">
+
+        <script type="text/javascript">
+            if (window.location.hash == '#_=_') {
+                window.location.hash = '';
+            }
+        </script>
+    </head>
+    <body data-spy="scroll" data-target=".navbar-custom" cz-shortcut-listen="true">
+        <div class="container">
+            <!-- header -->
+            {% block custom-header %}
+
+            {% endblock %}
+            <!-- content -->
+            {% if messages %}
+            <ul class="messages list-unstyled">
+                {% for message in messages %}
+                <li{% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %}>
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                    {{ message }}
+                    </li>
+                    {% endfor %}
+            </ul>
+            {% endif %}
+            <div class="app-body-container container" id="body_container">
+                {% block content %}
+
+                {% endblock %}
+
+            </div>
+            <!-- footer -->
+            {% include "tfooter.html" %}
+        </div>
+        <!-- init -->
+        <script>
+            define('onLoad', ['app'], function(App) {
+                App.addInitializer(function() {
+                    var eventToTrigger = 'User:' + ({% if not user.is_authenticated %}'IsAnonymousUser'{% else %}'IsLoggedIn'{% endif %});
+                    App.vent.trigger(eventToTrigger, '{% autoescape off %}{{ userdata }}{% endautoescape %}');
+                });
+                App.addInitializer(function() {
+                    $('.lang-select').click(function() {
+                        var lang = $(this).attr('value'), $form = $('#change_lang');
+                        $form.find('[name="language"]').attr('value', lang);
+                        $form.submit();
+                    });
+                });
+            });
+        </script>
+        {% block endscripts %}
+
+        {% endblock %}
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/joyride-1.0.5.css">
+        
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap-datetimepicker.min.css">
+        <ol id="guide" style="display: none;">
+        </ol>
+    </body>
+
+</html>

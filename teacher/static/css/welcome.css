@@ -1,0 +1,45 @@
+.app-welcome-features-different { 
+  background: url(../images/different.jpg) no-repeat center center fixed; 
+  
+}
+.app-welcome-features-open { 
+  background: url(../images/open.jpg) no-repeat center center fixed; 
+  
+}
+.app-welcome-features-massive { 
+  background: url(../images/massive.jpg) no-repeat center center fixed; 
+  
+}
+.app-welcome-features-lab { 
+  background: url(../images/lab.jpg) no-repeat center center fixed; 
+  
+}
+.app-welcome-features-explore { 
+  background: url(../images/explore.jpg) no-repeat center center fixed; 
+  
+}
+.app-welcome-content-text {
+	background-color: #FFFFFF;
+	padding: 5px;
+}
+.app-welcome-features-meem { 
+  background: url(../images/meem.jpg) no-repeat center center fixed; 
+  
+}
+.app-welcome-how-item.active-item {
+	border-bottom: solid 4px #006DCC;
+}
+.app-welcome-how-item {
+	border-bottom: solid 4px transparent;
+}
+.app-welcome-how-content {
+	width : 100%;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	min-height: 700px;
+}
+.app-welcome-how-content .jumbotron {
+	background-color: transparent;
+}

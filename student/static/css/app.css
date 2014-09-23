@@ -1,0 +1,61 @@
+@import url(course.css);
+@import url(login.css);
+@import url(welcome.css);
+@import url(freelancer.css);
+@import url(nav-bar.css);
+input, textarea {
+	direction: rtl !important
+}
+#body_container {
+	margin-top: 150px;
+}
+element.style {
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+#students .faces .faces-group.active img {
+	opacity: 1;
+}
+#students .faces .face {
+	width: 98px;
+	height: 98px;
+	display: block;
+	float: right;
+	margin: 0 0 8px 8px;
+	overflow: hidden;
+	background: rgba(0,0,0,0.05);
+}
+#students .faces .face img {
+	-webkit-transition: opacity 600ms linear;
+	transition: opacity 600ms linear;
+	opacity: 0;
+	display: block;
+	width: 100%;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+img {
+	vertical-align: middle;
+}
+img {
+	border: 0;
+}
+.face {
+	width: 93px;
+	height: 93px;
+	margin: 0px 0px 13px 13px;
+}
+.app-about-us p{
+	text-align: center
+}
+.app-hand{
+	cursor: pointer;
+}
+.app-rtl{
+	direction : rtl;
+}

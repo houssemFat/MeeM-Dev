@@ -1,0 +1,49 @@
+<h2 class="page-header"><%= common.truncateString (title, 20, '...') %></h2>
+<div class="process">
+    <div class="process-row">
+        <div class="process-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled">
+                <i class="fa fa-film"></i>
+            </button>
+            <p>
+                <%= assignementCount %>
+            </p>
+        </div>
+        <div class="process-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled">
+                <i class="fa fa-comments-o fa-3x"></i>
+            </button>
+            <p>
+                <%= commentsCount %>
+            </p>
+        </div>
+        <div class="process-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled">
+                <i class="fa fa-question fa-3x"></i>
+            </button>
+            <p>
+                <%= documentsCount %>
+            </p>
+        </div>
+        <div class="process-step">
+            <button type="button" class="btn btn-default btn-circle" disabled="disabled">
+                <i class="fa fa-tasks"></i>
+            </button>
+            <p>
+                <%= documentsCount %>
+            </p>
+        </div>
+        <div class="process-step">
+            <button type="button" class="btn btn-success btn-circle" disabled="disabled">
+                <i class="fa fa-file-text-o fa-3x"></i>
+            </button>
+            <p>
+                <%= documentsCount %>
+            </p>
+        </div>
+    </div>
+</div>
+<h2 class="page-header"><%= common.tr('Comments') %></h2>
+<div id="comments_view">
+
+</div>

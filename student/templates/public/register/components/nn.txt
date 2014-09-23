@@ -1,0 +1,88 @@
+<div style="color:red;background-color:white" class="showErrorMessage"><HUGE>{$TRANSLATION[$error]}</HUGE></div>
+<table width="100%" style="background-color:white;text-align:right">
+	<tr>
+		<td style="width:50%" valign="middle">
+			<form style="display:inline-block;width:90%" class="edit" method="POST">
+				<table border="0">
+					<tr>
+						<td><label>{$TRANSLATION.name}</label></td>
+						<td>
+							<input name="name" type="text" class="required" autocomplete='off'><span class="star-required">*</span>
+							<div id="errorMessage_title" class="errorMessage">{$MESSAGES_TRANSLATION.emptyFieldError}</div>
+						</td>
+					</tr>
+					<tr>
+						<td><label>{$TRANSLATION.emailLabel}</label></td>
+						<td>
+							<input name="emailaddress" type="text" class="required" autocomplete='off'><span class="star-required">*</span>
+							<div id="errorMessage_emailaddress" class="errorMessage">{$MESSAGES_TRANSLATION.emptyFieldError}</div>
+						</td>
+					</tr>
+					<tr>
+						<td><label>{$TRANSLATION.emailLabel}</label></td>
+						<td>
+							<input name="emailaddress" type="password" class="required" ><span class="star-required">*</span>
+							<div id="errorMessage_password" class="errorMessage">{$MESSAGES_TRANSLATION.emptyFieldError}</div>
+						</td>
+					</tr>
+					<tr>
+						<td><label>{$TRANSLATION.repasswordLabel}</label></td>
+						<td>
+							<input id="new_provider_re_password" type="password" class="required"/>
+						</td>
+					</tr>
+					<tr>
+						<td><label>{$TRANSLATION.displayName}</label></td>
+						<td>
+							<input name="displayname" type="text">
+						</td>
+					</tr><tr>
+						<td clospan="2">
+							<div id="captcha_img" style="width:300px;height:50px">
+								<img src='img.php?type=captcha&'/>
+							</div>
+						</td>
+						<td>
+							<input id="re_captcha_img"  type="button" value="{$TRANSLATION.refresh}">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								{$TRANSLATION.captcha_text}
+							</div>
+						</td>
+						<td>
+							<input class="required" name="captcha" />
+						</td>
+						<td>
+							<span class="star">*</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+								<span class="star">*</span>
+								<span><HUGE> {$TRANSLATION.required}</HUGE></span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="right">
+							<input type="button" id="submit_form"  class="regitser-btn hand" value="{$TRANSLATION.save}"/>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</td>
+		<td>
+			{include file='./use_fb_tw.tpl'}		
+		</td>
+	</tr>
+	<tr>
+		<td align="right" colspan="2">
+			<input type="checkbox"  id="accept_policy" class="hand" value="{$TRANSLATION.save}"/>
+			<input type="button"  id="accept_policy_error" class="hand" style="display:none ;border:0px;width:15px;height:15px;background-color:red"/>
+			<span style="font-size:12px">I accept the terms of policy, the security issues and the cookies<a href="help.php?topic=contract">read</a></span>
+			<input id="submit" type="button" class="hand" value="{$TRANSLATION.save}"/>							
+		</td>
+	</tr>
+</table>

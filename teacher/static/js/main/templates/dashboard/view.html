@@ -1,0 +1,88 @@
+<div class="col-sm-3 col-xs-6">
+    <div class=" well well-sm">
+        <div>
+            <i class="fa fa-users fa-5x"> </i>
+            <span class="label"> <span class="text-warning "> <i class="fa fa-exclamation-triangle"></i> there are (<%= invitations_recieved_count %>) in waiting</span> </span>
+
+        </div>
+        <div class="text">
+            <var><%= studentsCount %></var>
+            <label class="text-muted"><%= common.tr('staff')%> </label>
+
+        </div>
+        <div>
+            <button id="staff" class="btn btn-default btn-md" >
+                <i class="fa fa-eye"> </i> <%= common.tr('manage')%> <%= common.tr('staff')%>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-sm-3 col-xs-6">
+    <div class=" well well-sm">
+        <div>
+            <i class="fa fa-suitcase fa-5x"></i>
+        </div>
+        <div class="text">
+            <var><%= coursesCount %></var>
+            <label class="text-muted"><%= common.tr('Courses')%></label>
+        </div>
+        <div>
+            <a href="/teacher/#course" id="courses" class="btn btn-default btn-md"> <i class="fa fa-eye"> </i> <%= common.tr('manage')%> <%= common.tr('Courses')%> </a>
+        </div>
+    </div>
+</div>
+<div class="col-sm-3 col-xs-6">
+    <div class=" well well-sm">
+        <div>
+            <i class="fa fa-tasks fa-5x"> </i>
+        </div>
+        <div>
+            <var><%= tasksCount %></var>
+            <label class="text-muted"><%= common.tr('Tasks')%> </label>
+        </div>
+        <div>
+            <a href="/teacher/#collaboration/tasks/" id="tasks" class="btn btn-default btn-md"> <i class="fa fa-eye"> </i> <%= common.tr('manage')%> <%= common.tr('Tasks')%> </a>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-3 col-xs-6">
+    <div class=" well well-sm">
+        <div class="col-lg-6">
+            <div>
+                <i class="fa fa-cog fa-5x"></i><i class="fa fa-wrench"></i>
+            </div>
+            <div>
+                <div class="progress">
+                    <div data-percentage="<%=progress%>%" style="width: <%=progress%>%" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                        <a id="profile" href="/teacher/accounts/profile"> <%= common.tr('profile')%></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div>
+                <i class="fa fa-inbox fa-5x"></i>
+            </div>
+            <div>
+                <a href="/teacher/#inbox" id="inbox" class="btn btn-default btn-md"><i class="fa fa-wrench"></i> <%= common.tr('inbox')%></a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="col-lg-12">
+    <div class="col-lg-6 col-sm-12">
+        <h6 class="header"><%= common.tr('Recent Activity')%></h6>
+        <hr>
+        <div class="panel">
+            <ul class="list-group" id="recent_history"></ul>
+        </div>
+    </div>
+    <div class="col-lg-6 col-sm-12 todo-list">
+        <h6 class="header"><%= common.tr('To do Activities')%></h6>
+        <hr>
+        <ul class="list-group"  id="todo_list"></ul>
+
+    </div>
+</div>

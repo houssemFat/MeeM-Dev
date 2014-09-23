@@ -1,0 +1,11 @@
+<div class="col-sm-4 col-md-4 collaborator-team-item">
+    <h5><%= name %></h5>
+    <div class="btn-group btn-group-sm inline">
+        <button id="add" class="btn btn-sm <% if (selected) { %>btn-danger<% } else { %> btn-success <% } %>">
+            <i class="fa <% if (selected) { %>fa-minus<% } else { %> fa-plus <% } %>"></i>
+        </button>
+        <button id="view" class="btn btn-sm">
+            <i class="fa fa-eye"></i>
+        </button>
+    </div>
+</div>

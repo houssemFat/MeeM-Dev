@@ -1,0 +1,215 @@
+<div class="center-block">
+    <!-- Vision -->
+    <div class="center-block row" id="section_vision">
+        <div class="col-md-12 col-lg-10 col-lg-offset-1">
+            <h2 class="page-header"> <%= common.tr("The idea")%> </h2>
+        </div>
+
+        <div class="col-md-12 col-lg-10 col-lg-offset-1">
+            <div class="jumbotron">
+                <h1>Jumbotron heading</h1>
+                <p class="lead">
+                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                </p>
+                <div class="row">
+                    <div class="col-lg-9">
+                        <form action="/teacher/account/login/" class="form-inline" method="post" accept-charset="utf-8">
+                            <%= common.django.csrf_token () %>
+                            <div class="form-group">
+                                <input name="email" class="form-control" placeholder="Email" maxlength="255" type="email">
+                            </div>
+                            <div class="form-group">
+                                <input name="password" class="form-control" placeholder="Password" type="password">
+                            </div>
+                            <div class="form-group">
+                                <input class="btn btn-success" type="submit" value="Sign in">
+                            </div>
+                            <div class="checkbox">
+                                <div class="checkbox">
+                                    <label for="login_remember">
+                                        <input type="checkbox" name="remember" value="1" id="login_remember">
+                                        Remember me</label>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="col-lg-3">
+                        <a class="btn btn-danger" href="/teacher/account/login/" role="button">Sign up today</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Features -->
+    <div class="center-block row" id="section_features">
+        <div class="col-md-12 col-lg-10 col-lg-offset-1">
+            <h2 class="page-header"> Vision </h2>
+
+            <!-- learn -->
+            <div class="col-sm-4 col-md-4 text-center col-lg-4">
+                <div class="app-welcome-content">
+                    <div class="app-welcome-content-inner">
+                        <i class="fa-5x fa fa-edit"> </i>
+                    </div>
+
+                </div>
+                <div class="text-center">
+                    <h3>Learn Differently</h3>
+                </div>
+            </div>
+            <!-- classes -->
+            <div class="col-sm-4 col-md-4 text-center col-lg-4">
+                <div class="app-welcome-content">
+                    <div class="app-welcome-content-inner">
+                        <i class="fa-5x fa fa-group"> </i>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3>Think with us</h3>
+                </div>
+            </div>
+            <!-- Share -->
+            <div class="col-sm-4 col-md-4 text-center col-lg-4">
+                <div class="app-welcome-content">
+                    <div class="app-welcome-content-inner">
+                        <i class="fa-5x fa fa-share"> </i>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3>Think with us</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <!-- services -->
+    <div class="center-block row" id="section_services">
+        <!-- services -->
+        <div class="col-md-12 col-lg-10 col-lg-offset-1">
+            <h2 class="page-header"> Services </h2>
+        </div>
+        <!-- Features contents -->
+        <div class="row col-lg-10 col-lg-offset-1" id="services_content">
+
+            <div class="col-xs-2 col-sm-2 text-center app-welcome-how-item" id="different">
+                <i class="fa-2x fa fa-comments"> </i>
+                <div class="text-center  visible-lg">
+                    <h6>Educate differently</h6>
+                </div>
+            </div>
+
+            <!-- groups -->
+            <div class="col-xs-2 col-sm-2 text-center app-welcome-how-item" id="open">
+                <i class="fa-2x fa fa-group"> </i>
+                <div class="text-center visible-lg">
+                    <h6>Think Open</h6>
+                </div>
+            </div>
+            <!-- groups -->
+            <div class="col-xs-2 col-sm-2 text-center app-welcome-how-item" id="massive">
+                <i class="fa-2x fa fa-dribbble"> </i>
+                <div class="text-center  visible-lg">
+                    <h6>Think Massive</h6>
+                </div>
+            </div>
+            <!-- Explore -->
+            <div class="col-xs-2 col-sm-2 text-center app-welcome-how-item" id="lab">
+                <i class="fa-2x fa fa-flask"> </i>
+                <div class="text-center visible-lg">
+                    <h6>Think Online</h6>
+                </div>
+            </div>
+            <!-- Explore -->
+            <div class="col-xs-2 col-sm-2 text-center app-welcome-how-item"  id="explore">
+                <i class="fa-2x fa fa-share-alt"> </i>
+                <div class="text-center  visible-lg">
+                    <h6>Think Freedom</h6>
+                </div>
+            </div>
+            <!-- statistics -->
+            <div class="col-xs-2 col-sm-2 text-center app-welcome-how-item" id="meem">
+                <i class="fa-2x fa fa-bar-chart-o"> </i>
+                <div class="text-center  visible-lg">
+                    <h6>Think MeeM</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <!-- Features contents -->
+    <div class="row center-block">
+
+        <div class="app-welcome-how-content app-welcome-features-different center-block" for-id="different" style="display: none">
+            <div class="jumbotron">
+                <h1>Welcome</h1>
+                <p class="lead">
+                    <span class="app-welcome-content-text">Just think how technology can offers another better way to have a different education system.</span>
+                </p>
+                <p>
+                    <a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="app-welcome-how-content app-welcome-features-open center-block" for-id="open"  style="display: none">
+            <div class="jumbotron">
+                <h1>Be Open</h1>
+                <p class="lead">
+                    <span class="app-welcome-content-text">A lot of students doesn't have access to good education, thnik about offer the education to him.</span>
+                </p>
+                <p>
+                    <a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="app-welcome-how-content app-welcome-features-massive  center-block" for-id="massive">
+            <div class="jumbotron">
+                <h1>Think Massive</h1>
+                <p class="lead">
+                    <span class="app-welcome-content-text">With millions of arabic students arround world, meem is the best place to collect them in one education system.</span>
+                </p>
+                <p>
+                    <a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="app-welcome-how-content  app-welcome-features-lab center-block" for-id="lab"  style="display: none">
+            <div class="jumbotron">
+                <h1>Build your lab</h1>
+                <p class="lead">
+                    <span class="app-welcome-content-text">Because the education has no sens without experiences, meem offers offers you the best place to create your virtual lab.</span>
+                </p>
+                <p>
+                    <a class="btn btn-lg btn-success" href="#" role="button">More about labs</a>
+                </p>
+            </div>
+        </div>
+        <div class="app-welcome-how-content app-welcome-features-explore center-block" for-id="explore"  style="display: none" >
+            <div class="jumbotron">
+                <h1>Jumbotron heading</h1>
+                <p class="lead">
+                    <span class="app-welcome-content-text">Because there is nothing build to self-use, collaboration is the whole key of succes, build your community for your classes.</span>
+                </p>
+                <p>
+                    <a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a>
+                </p>
+            </div>
+        </div>
+        <div class="app-welcome-how-content app-welcome-features-meem center-block" for-id="meem"  style="display: none">
+            <div class="jumbotron">
+                <h1>About us </h1>
+                <p class="lead">
+                    <span class="app-welcome-content-text">Education Must be free !.</span>
+                </p>
+                <p>
+                    <a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

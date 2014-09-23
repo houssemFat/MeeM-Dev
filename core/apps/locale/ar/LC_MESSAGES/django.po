@@ -1,0 +1,80 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Fathallah houssem, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: MeeM\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-10-14 04:23+0300\n"
+"PO-Revision-Date: 2014-06-22 01:20+0100\n"
+"Last-Translator: Fathallah houssemLanguage-Team: Arabic <doc@arabeyes.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Language: ar\n"
+"Language-Team: \n"
+
+#: templates/accounts/professor/email/email_confirmation_message.html
+#: templates/accounts/professor/email/email_confirmation_message.txt
+msgid ""
+"Hello %(username)s, please activate your account by clicking to the link "
+"below."
+msgstr ".يرجى تفعيل حسابك عن طريق النقر على الرابط أدناه %(username)s مرحبا"
+
+#: templates/accounts/professor/email/email_confirmation_message.html
+#: templates/accounts/professor/email/email_confirmation_message.txt
+msgid "Hello"
+msgstr "مرحبا"
+
+#: templates/accounts/professor/email/email_confirmation_message.html
+#: templates/accounts/professor/email/email_confirmation_message.txt
+msgid "Activate"
+msgstr "تفعيل"
+
+#: apps/accounts/stdudents/forms.py
+msgid "A user with this email already exists."
+msgstr "يستخدم مستخدم نفس عنوان البريد الإلكتروني."
+
+#: apps/accounts/stdudents/forms.py
+msgid "A user with this phone number already exists."
+msgstr "رقم الهاتف موجود"
+
+#: teacher/templates/tfooter.html
+msgid "Privacy"
+msgstr "الخصوصية"
+
+#: teacher/templates/tfooter.html
+msgid "Terms of Use"
+msgstr "شروط الاستخدام"
+
+#: teacher/templates/tfooter.html
+msgid "Business"
+msgstr "أعمال"
+
+#: apps/accounts/stdudents/forms.py
+msgid "Phone"
+msgstr "Téléphone"
+
+#: teacher/templates/theader-in.html
+msgid "dashboard"
+msgstr "عام"
+
+#: teacher/templates/theader-in.html
+msgid "courses"
+msgstr "دورات"
+
+#: teacher/templates/theader-in.html
+msgid "collaborators"
+msgstr "المتعاونين"
+
+#: teacher/templates/theader-in.html
+msgid "calendar"
+msgstr "مفكرة"
+
+#: teacher/templates/theader-in.html
+msgid "inbox"
+msgstr "البريد "

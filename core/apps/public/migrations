@@ -1,0 +1,3 @@
+model country :
+  db_name : app_public_country
+     

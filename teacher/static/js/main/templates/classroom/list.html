@@ -1,0 +1,51 @@
+<div class="panel panel-default app-thread">
+    <div class="panel-heading">
+        <span class="panel-title"><%= common.tr ('List of') %>  <%= common.tr ('Students') %> </span>
+        <ul class="panel-title pull-right list-inline list-unstyled">
+            <li>
+                <a href="#invite" id="invite_by_mail" data-toggle="tooltip" data-placement="top" title="Add Contact"><i class="fa fa-envelope"></i></a>
+            </li>
+            <li>
+                <a href="#" class="hide-search" data-command="toggle-search" data-toggle="tooltip" data-placement="top" title="Toggle Search"><!--<i class="fa fa-ellipsis-v"></i> --> <i class="fa fa-search"></i></a>
+            </li>
+        </ul>
+        <span class="label label-info pull-left"> invitations envoyées : <%= invitations %></span>
+
+        <div class="row" style="display: none;">
+            <div class="col-xs-12">
+                <div class="input-group c-search">
+                    <input type="text" class="form-control app-autocomplete-value" id="classroom_auto_complete">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="fa fa-search text-muted"></span>
+                        </button> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div id="list_view">
+
+        </div>
+        <div id="list_empty">
+            <div class="col-xs-12 col-sm-12 col-lg-6 col-lg-offset-3 col-xs-offset-3">
+                <div class="app-course-media-box">
+                    <div class="icon">
+                        <div class="image">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="info">
+                            <h3 class="title"><%= common.tr ('Welcome!') %> </h3>
+                            <p>
+                                <h2><%= common.tr ('Try searching for students or send invitation it by email') %></h2>
+                            </p>
+                        </div>
+            <div class="space"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>

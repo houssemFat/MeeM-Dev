@@ -1,0 +1,61 @@
+.app-t-document-list-item{
+	color : #0066A4;
+	height: 40px;
+	padding-top: 10px;
+	padding-left: 4px;
+}
+.app-t-document-list-item:hover{
+	color : #006600;
+	background-color: #FFF6BF;
+}
+.app-t-document-list-item-menu i.fa-trash-o{
+	color: red;
+	scrollbar-base-color:       #CCCCCC;
+	scrollbar-arrow-color:      ${3:#000000;
+	scrollbar-track-color:      #999999;
+	scrollbar-3dlight-color:    #EEEEEE;
+	scrollbar-highlight-color:  #FFFFFF;
+	scrollbar-face-color:       #CCCCCC;
+	scrollbar-shadow-color:     #999999;
+	scrollbar-darkshadow-color: #666666;},
+	scale : 1.5
+}
+.app-t-document-list-menu{
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #CCCCCC;
+}
+.app-widget{
+	position: absolute;
+	z-index: 5;
+	background-color: #CCCCCC;
+	padding: 10px;
+	border-radius: 3px;
+	border: solid 2px rgba(238, 238, 238, 0.52);
+	width: 100px;
+	text-align: center;
+}
+
+.app-widget-item{
+	text-align: left;
+	cursor: pointer;
+}
+.app-widget-item:hover{
+	background-color: #FEF1EC;
+	color: #000000;
+}
+
+.app-t-document-list-item-share{
+	right: 85px;
+	height: 25px;
+	top: 7px;
+	width: 150px;
+}
+
+#document_share_body{
+	background-color: #FFFFFF;
+	padding: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-radius: 2px;
+}

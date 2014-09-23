@@ -1,0 +1,95 @@
+<div class="app-scheduler">
+    <div class="panel panel-default app-thread">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-lg-10">
+                    <span class="panel-title"><%= common.tr('scheduler') %></span>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <div class="btn-group btn-group-sm pull-left">
+                        <button href="#" data-toggle="dropdown" class="btn btn-info dropdown-toggle share">
+                            <i class="fa fa-bookmark-o"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a data-original-title="Twitter" rel="tooltip"  href="#" class="btn btn-twitter" data-placement="left"> <i class="fa fa-twitter"></i> </a>
+                            </li>
+                            <li>
+                                <a data-original-title="Facebook" rel="tooltip"  href="#" class="btn btn-facebook" data-placement="left"> <i class="fa fa-facebook"></i> </a>
+                            </li>
+                            <li>
+                                <a data-original-title="Google+" rel="tooltip"  href="#" class="btn btn-google" data-placement="left"> <i class="fa fa-google-plus"></i> </a>
+                            </li>
+                            <li>
+                                <a data-original-title="LinkedIn" rel="tooltip"  href="#" class="btn btn-linkedin" data-placement="left"> <i class="fa fa-linkedin"></i> </a>
+                            </li>
+                            <li>
+                                <a data-original-title="Pinterest" rel="tooltip"  class="btn btn-pinterest" data-placement="left"> <i class="fa fa-pinterest"></i> </a>
+                            </li>
+                            <li>
+                                <a  data-original-title="Email" rel="tooltip" class="btn btn-mail" data-placement="left"> <i class="fa fa-envelope"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group btn-group-sm pull-left">
+                        <button href="#" data-toggle="dropdown" class="btn btn-info dropdown-toggle share">
+                            <span class="fa fa-users"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a data-original-title="Twitter" rel="tooltip"  href="#" class="btn btn-twitter" data-placement="left"> <i class="fa fa-twitter"></i> </a>
+                            </li>
+                            <li>
+                                <a data-original-title="Facebook" rel="tooltip"  href="#" class="btn btn-facebook" data-placement="left"> <i class="fa fa-facebook"></i> </a>
+                            </li>
+                            <li>
+                                <a data-original-title="Google+" rel="tooltip"  href="#" class="btn btn-google" data-placement="left"> <i class="fa fa-google-plus"></i> </a>
+                            </li>
+                            <li>
+                                <a data-original-title="LinkedIn" rel="tooltip"  href="#" class="btn btn-linkedin" data-placement="left"> <i class="fa fa-linkedin"></i> </a>
+                            </li>
+                            <li>
+                                <a data-original-title="Pinterest" rel="tooltip"  class="btn btn-pinterest" data-placement="left"> <i class="fa fa-pinterest"></i> </a>
+                            </li>
+                            <li>
+                                <a  data-original-title="Email" rel="tooltip" class="btn btn-mail" data-placement="left"> <i class="fa fa-envelope"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="panel-body">
+            <div id="external-events" style="display: none">
+                <h4>Draggable Events</h4>
+                <div class="external-event ui-draggable" style="position: relative;">
+                    My Event 1
+                </div>
+                <div class="external-event ui-draggable" style="position: relative; z-index: auto; left: 0px; top: 0px;">
+                    My Event 2
+                </div>
+                <div class="external-event ui-draggable" style="position: relative;">
+                    My Event 3
+                </div>
+                <div class="external-event ui-draggable" style="position: relative;">
+                    My Event 4
+                </div>
+                <div class="external-event ui-draggable" style="position: relative;">
+                    My Event 5
+                </div>
+                <p>
+                    <input type="checkbox" id="drop-remove">
+                    <label for="drop-remove">remove after drop</label>
+                </p>
+            </div>
+            <div id="calendar" class="calendar">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade bs-modal-sm" id="event_modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+
+</div>

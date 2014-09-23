@@ -1,0 +1,68 @@
+<form class="form-horizontal well">
+    <fieldset>
+        <legend class="text-center">
+            <%= MMC.tr('Video')%>
+        </legend>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="card-holder-name"><%= MMC.tr('Title')%></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="card-holder-name" id="title" placeholder="<%= MMC.tr('Title')%>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="card-number"><%= MMC.tr('Description')%></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="card-number" id="description" placeholder="<%= MMC.tr('Description')%>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="card-number"><%= MMC.tr('Source url')%></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="card-number" id="url" placeholder="<%= MMC.tr('Source url')%>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="card-number"><%= MMC.tr('Files')%></label>
+
+            <div class="col-sm-10">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <button id="add_script" class="btn btn-default" disabled="disabled">
+                            <%= MMC.tr('add')%> <%= MMC.tr('Scenario')%>
+                        </button>
+                        <button id="add_file" class="btn btn-default" disabled="disabled">
+                            <%= MMC.tr('add')%> <%= MMC.tr('Files')%>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <button id="save" type="button" class="btn btn-success">
+                    Create
+                </button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+<div class="col-md-12">
+    <!-- script file -->
+    <legend>
+        Scénario File
+    </legend>
+    <div class="col-lg-12">
+        <a href="/media/download/video/script/<%= description %>" id="scriptname"><%= scriptname %></a>
+    </div>
+    <!-- documents file -->
+    <legend>
+        Documents
+    </legend>
+    <div class="row">
+        <ul class="list-group" id="video_documents">
+
+        </ul>
+    </div>
+</div>
