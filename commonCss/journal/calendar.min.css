@@ -1,0 +1,97 @@
+[class*="week-cell"]:hover{
+	background-color: #D0E3EF;
+	color : #FFFFFF;
+	border-bottom: solid 1px #D0E3EF ;
+	cursor: pointer;
+}
+[class*="week-cell"]{
+	background-color: #529EC6;
+	height: 90px;
+	text-align: center;
+	border-bottom: solid 1px #FFFFFF ;
+}
+.app-cal-week-head{
+	color: #0066A4;
+	font-size: 10px;
+	padding: 3px;
+	border-bottom: solid 1px #0E90D2;
+}
+.app-cal-week-row {
+	width: 14.285714285714285714285714285714% !important ;
+	float: left;
+}
+
+.app-cal-week-row-event-in {
+	background-color: #FFD324 !important;
+}
+
+
+.app-cal-event {
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	bottom:15px;
+	position :relative;
+	float: left;
+	cursor: pointer;
+}
+.app-cal-event-done {
+ 	background-color: #006600;
+}
+.app-cal-event-wait {
+ 	background-color: #35B8F0;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+   from {
+    /*background-position: 40px 0;*/
+   	background-color: #006DCC;
+   	
+  }
+  to {
+    background-color: #D0E3EF;
+  }
+}
+
+@-moz-keyframes progress-bar-stripes {
+   from {
+    /*background-position: 40px 0;*/
+   	background-color: #006DCC;
+   	
+  }
+  to {
+    background-color: #D0E3EF;
+  }
+}
+
+@-o-keyframes progress-bar-stripes {
+   from {
+    /*background-position: 40px 0;*/
+   	background-color: #006DCC;
+   	
+  }
+  to {
+    background-color: #D0E3EF;
+  }
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    /*background-position: 40px 0;*/
+   	background-color: #006DCC;
+   	
+  }
+  to {
+    background-color: #D0E3EF;
+  }
+}
+
+.app-cal-event-active{
+	width: 15px !important;
+	height: 15px !important;
+  	-webkit-animation: progress-bar-stripes 1s linear infinite;
+ 	-moz-animation: progress-bar-stripes 1s linear infinite;
+  	-ms-animation: progress-bar-stripes 1s linear infinite;
+   	-o-animation: progress-bar-stripes 1s linear infinite;
+  	animation: progress-bar-stripes 1s linear infinite;
+}
