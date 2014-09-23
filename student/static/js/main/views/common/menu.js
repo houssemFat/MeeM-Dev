@@ -9,7 +9,7 @@ define([
 
   return Backbone.View.extend({
         events : {
-            'click .nav-item' :  'navigate',
+            'click .nav-btn' :  'navigate',
         },
         /**
          * 
@@ -25,6 +25,24 @@ define([
         initialize: function(options) {
             this.template = _.template(template || "");
             this.render ();
+            
+            // add dynamic route
+            App.router.route('profile/', 'profile', $.proxy(this.viewProfile,this));
+            if ("profile/" === Backbone.history.fragment){
+               Backbone.history.loadUrl('profile/'); 
+            }
+        },
+        /**
+         * 
+         */
+        viewProfile : function (options){
+            var model = this.model;
+            require(['scripts/main/views/user/profile'], function(Form) {
+                
+                  App.mainRegion.show(new Form({
+                    model : model
+                  }));
+          });
         },
         /**
          * 

@@ -70,7 +70,7 @@ class StudentCreationForm(forms.Form):
         setup_user_email(request, user, [])
         
         if (user.auth_type == user.EMAIL):
-            send_email_confirmation(request, user, signup=True)
+            send_email_confirmation(request, user, 'student', signup=True)
         else :
             send_sms_confirmation (request, user, signup=True)
         return user
@@ -154,6 +154,6 @@ class ResetPasswordForm(forms.Form):
                                    path)
             context = {"user": user,
                        "password_reset_url": url}
-            get_helper()().send_mail('accounts/professor/email/password_reset_key', email, context)
+            get_helper()().send_mail('accounts/teacher/email/password_reset_key', email, context)
         return self.cleaned_data["email"]
 

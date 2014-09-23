@@ -41,5 +41,8 @@ define([
     App  = new Backbone.Marionette.Application;
     // Emulation of json 
     Backbone.emulateJSON = true ;
+    // activate translate
+    //
+    common.activateTranslate ();
     return App;
 });

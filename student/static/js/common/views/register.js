@@ -89,7 +89,7 @@ define([
         // Don't let this button submit the form
         event.preventDefault();
         // Hide any errors on a new submit
-        var url =  __CONFIG__.baseUrl + 'account/student/j/register/';
+        var url =  __CONFIG__.baseUrl + 'student/account/j/register/';
         this.$registerError.hide ();
         this.$registerErrorText.html('');
         var scope = this ;

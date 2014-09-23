@@ -55,8 +55,6 @@ def register(request):
         form = StudentCreationForm(request.POST)
         if form.is_valid():
             new_user = form.save(request)
-            # return HttpResponseRedirect("/books/")
-            # Redirect to a success page.
             message.update({'satus': 'OK', 'auth_type' : new_user.auth_type})
             message.update({'message': 'welcome'})
             if (new_user.auth_type == new_user.PHONE):
@@ -125,9 +123,9 @@ confirm_email = ConfirmEmailView.as_view()
 class ConfirmSMSView(TemplateResponseMixin, View):
     def get_template_names(self):
         if self.request.method == 'POST':
-            return ["accounts/professor/email_confirmed.html"]
+            return ["accounts/teacher/email_confirmed.html"]
         else:
-            return ["accounts/professor/email_confirm.html"]
+            return ["accounts/teacher/email_confirm.html"]
 
     def get(self, *args, **kwargs):
         try:

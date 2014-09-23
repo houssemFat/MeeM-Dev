@@ -20,7 +20,8 @@
         <script>
             __CONFIG__ = { {% get_student_js_global_vars %} ,
                 csrf : '{{ csrf_token }}',
-                STATIC_URL : '{{ STATIC_URL }}'
+                STATIC_URL : '{{ STATIC_URL }}',
+                baseUrl : '/'
             };
         </script>
         <!-- #FIXME  me nginx -->

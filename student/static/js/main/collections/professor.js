@@ -2,7 +2,7 @@ define([
   'jquery',
   'underscore', 
   'backbone',
-  'scripts/main/models/professor',
+  'scripts/main/models/teacher',
   ], function($, _, Backbone, ProfessorModel){
 
   var ProfessorCollection = Backbone.Collection.extend({

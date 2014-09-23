@@ -44,6 +44,7 @@ var locale = (function() {
         "register" : "إنشاء حساب",
         "try again" : "حاول مرة أخرى",
         "saveCourse" : "التحق بالدرس",
+        "Enter" : "دخول",
         "course_login_required" : "Please log in to access to this course ",
         /* common */
         "an error has occurred, try again" : "لقد حدث خطأ، حاول مرة أخرى",

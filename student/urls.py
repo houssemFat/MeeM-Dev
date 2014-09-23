@@ -17,6 +17,8 @@ urlpatterns = patterns('',
     
     # accounts:
     url(r'^account/', include('student.apps.accounts.urls')),
+    url(r'^logout/$', 'django.contrib.auth.views.logout',
+                          {'next_page': '/'}, name="user_account_logout"),
     
     # else :
     url(r'^$', include('student.apps.dashboard.urls')), 

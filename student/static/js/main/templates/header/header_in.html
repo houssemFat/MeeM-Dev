@@ -1,10 +1,19 @@
-<li class="nav-item"  data-url="profile">
-    <a href=""><i class="fa fa-user"></i> <%= username %></a>
-</li>
-<li class="nav-item" data-url="course">
-    <a href="">المواد</a>
+<li class="nav-item" >
+    <a href="" class="nav-btn" data-url="course">المواد</a>
 </li>
 
-<li class="nav-item" class="page-scroll" data-url="browse">
-    <a href="">dévourvrir</a>
+<li class="nav-item" class="page-scroll">
+    <a href="" class="nav-btn" data-url="browse" tr-value="discover"></a>
+
+</li>
+<li class="nav-item" id="nav_user_menu">
+    <a href="" class="nav-btn" data-url="profile" ><i class="fa fa-user"></i> <%= username %></a>
+    <ul class="list-unstyled">
+        <li>
+            <a href="/settings" tr-value="settings"></a>
+        </li>
+        <li>
+            <a href="logout" tr-value="exit"></a>
+        </li>
+    </ul>
 </li>

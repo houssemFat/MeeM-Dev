@@ -178,7 +178,7 @@ ROOT_URLCONF = 'core.urls'
 # various locations.
 ROOT_URLCONF_REVERSED = (
     'teacher.reversed_urls',
-    #'student.reversed_urls',
+    'student.reversed_urls',
 )
 
 # Python dotted path to the WSGI application used by Django's runserver.

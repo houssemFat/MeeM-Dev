@@ -5,12 +5,15 @@ from teacher.apps.decorators import can_view
 from core.apps.tools.common import dump_and_render_json 
 
 from core.apps.accounts.models import User
+from django.core.paginator import Paginator
 
 
 def list(request):
-    if 'type' in request.GET :
+    if (not request.user.is_authenticated ()) or 'type' in request.GET:
         list = []
         items =  Course.objects.all()
+        paginator = Paginator(items, 10)
+        recents_activities = paginator.page(1)
         for item in items:
             list.append ({'id' : item.id, 
                           'title' : item.title.encode("utf-8"), 
@@ -29,7 +32,7 @@ def list(request):
     #else :
     #return render(request, 'public/register.html', {'register_form': ProfessorCreationForm()})
 
-@can_view(Course, 'author')
+#@can_view(Course, 'author', 'student_apps_courses')
 def view(request, id):
     #if request.user.is_authenticated ():
     item =  Course.objects.get(pk=id)

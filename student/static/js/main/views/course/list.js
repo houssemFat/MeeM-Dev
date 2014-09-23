@@ -41,6 +41,12 @@ define([
           itemView.render ();
           this.$el.find('#course_list').append(itemView.el);
     },
+    /**
+     * 
+     */
+    close : function (){
+        this.remove ();
+    },
   });
   return CourseListView;
 });

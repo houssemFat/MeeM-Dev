@@ -2,7 +2,7 @@ define([
   'jquery', 
   'underscore', 
   'backbone', 
-  'scripts/main/views/professor/item',
+  'scripts/main/views/teacher/item',
   ], function($, _, Backbone, ProfessorItemView) {
   var ProfessorListView = Backbone.View.extend({
     /**
@@ -16,7 +16,7 @@ define([
      * @param {Object} options
      */
     initialize: function(options) {
-        this.$el = options.$container.find('#professor_body');
+        this.$el = options.$container.find('#teacher_body');
         this.render ();
     },
     /**

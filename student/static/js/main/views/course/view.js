@@ -8,8 +8,8 @@ define([
   'scripts/main/collections/chapter',
   'scripts/main/views/student/list',
   'scripts/main/collections/student',
-  'scripts/main/views/professor/list',
-  'scripts/main/collections/professor',
+  'scripts/main/views/teacher/list',
+  'scripts/main/collections/teacher',
   ], function($, _, Backbone, template, App, 
       ChapterList, ChapterCollection, 
       StudentList, StudentCollection,
@@ -45,8 +45,8 @@ define([
         // render relative chapter for current course
         var chapters = this.model.get ('chapters');
         this.chapterList = new ChapterList ({collection : new ChapterCollection (chapters), $container : this.$el});
-        // render relative professor for current course
-        var professors = this.model.get ('professors');
+        // render relative teacher for current course
+        var teachers = this.model.get ('teachers');
         this.chapterList = new ChapterList ({collection : new ChapterCollection (chapters), $container : this.$el});
         // render relative followers for current course
         var students = this.model.get ('students');
@@ -54,8 +54,11 @@ define([
         
         return this;
     },
+    /**
+     * 
+     */
     close : function (){
         this.remove ();
-    }
+    },
   });
 });

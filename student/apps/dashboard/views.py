@@ -1,11 +1,13 @@
 from django.views.generic import FormView
 from student.common import render
-from core.apps.tools.common import MeeMJSONEncoder, dump_and_render_json
+from core.apps.tools.common import MeeMJSONEncoder
+from django.core.urlresolvers import reverse, reverse_lazy
 import json
 from teacher.common import get_file_media_url
 
 # User.objects.annotate(page_count=Count('page')).filter(page_count__gte=2).count()
 def default(request):
+    data ={}
     if request.user.is_authenticated ():
         user = request.user
         user_data = {}
@@ -24,5 +26,6 @@ def default(request):
         data = json.dumps(user_data, encoding="utf-8", cls=MeeMJSONEncoder)
         return render(request,'home/in.html', { 'userdata' : data})
     else :
-        return dump_and_render_json(request, None)
+        account_reset_password = reverse_lazy("account_student_reset_password")
+        return render(request,'home/out.html', { 'userdata' : data, 'account_reset_password' :  account_reset_password})
     

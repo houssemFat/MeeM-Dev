@@ -15,6 +15,7 @@ define([
 ], function($, ui, bootstrap , _, Backbone,
             Router, App , User, LoginView, RegisterView, Menu) {
   
+  
   /**
    * 
    */

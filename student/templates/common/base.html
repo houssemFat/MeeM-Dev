@@ -3,7 +3,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h6>الاشتراك</h6>
+                <h2 tr-value="Enter"></h2>
+                <hr>
             </div>
         </div>
         <form role="form">
@@ -11,17 +12,17 @@
                 <div class="form-group col-xs-12 floating-label-form-group">
                     <input class="form-control col-lg-5 " type="email" name="login" placeholder=" الهاتف او البريد الإلكتروني" value="houcem902@live.fr" />
                     <input placeholder="كلمة السر" class="form-control  col-lg-5" name="password" type="password" value="21245"/>
-                    <button type="submit" id="submit" class="btn btn-small btn-success">
-                        Enter
+                    <button type="submit" id="submit" class="btn btn-small btn-success" tr-value="Enter">
+                        
                     </button>
                     <span class="page-scroll pull-left text-center">
-                        <a href="#register_section" class="btn btn-small btn-success">الاشتراك</a>
+                        <a href="#register_section" class="btn btn-small btn-success" tr-value="register"></a>
                     </span>
                 </div>
            </div>
            <div class="row col-lg-12" style="display: none">
                 <p class="alert alert-danger text-center" id="error">
-                   <i class="fa fa-user fa-2x"></i> !!  <a class="btn" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                   <i class="fa fa-user fa-2x"></i> !!  <a class="btn" href="{{account_reset_password}}">{% trans "Forgot Password?" %}</a>
                 </p>
                 
            </div>
@@ -129,7 +130,7 @@
                                 الاشتراك
                             </button>
                             <span class="page-scroll">
-                                <a href="#login_section" class="btn btn-small btn-success">I'm already</a>
+                                <a href="#login_section" class="btn btn-lg btn-success" tr-value="Enter"></a>
                             </span>
                         </div>
                     </div>

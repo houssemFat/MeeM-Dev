@@ -12,10 +12,11 @@ from teacher.apps.accounts.tools import set_user_message
 class LoginRequiredMiddleware(object):
     BASE_TEACHER_URL  = '/teacher/'
     REQUIRED_LOGIN_URL = (
-        r''+  BASE_TEACHER_URL + '(.*)$',
+        
     )
     LOGIN_REQUIRED_URLS_EXCEPTIONS = (
         r''+  BASE_TEACHER_URL + 'account/login/(.*)$',
+        r''+  BASE_TEACHER_URL + '/$',
         r''+  BASE_TEACHER_URL + 'account/register/(.*)$',
         r''+  BASE_TEACHER_URL + 'account/logout/(.*)$',
     )
@@ -60,8 +61,8 @@ class LoginRequiredMiddleware(object):
         
         for url in self.required:
             if url.match(request.path):
-                if not is_teacher (request):
-                    return redirect ('/teacher/account/login')
+                if request.user.is_authenticated() and is_teacher (request):
+                    return redirect ('/teacher')
                 else :
                     return login_required(view_func)(request, *view_args, **view_kwargs)
         # Explicitly return None for all non-matching requests

@@ -1,12 +1,7 @@
-from django.views.generic import FormView
-from .forms import ContactUsForm
 
 # Create your views here.
 
 from teacher.common import render
-#from student.apps.accounts.professor.forms import  ProfessorCreationForm 
-from core.apps.tools.common import dump_and_render_json 
-
 
 def home(request):
     if request.user.is_authenticated ():

@@ -50,7 +50,7 @@ except ImportError:
 
 
 
-def send_email_confirmation(request, user, signup=False):
+def send_email_confirmation(request, user, type="student", signup=False):
     """
     E-mail verification mails are sent:
     a) Explicitly: when a user signs up
@@ -75,14 +75,14 @@ def send_email_confirmation(request, user, signup=False):
                             email_address=email_address) \
                     .exists()
                 if send_email:
-                    email_address.send_confirmation(request,
-                                                    signup=signup)
+                    email_address.send_confirmation(request, type, signup=signup)
             else:
                 send_email = False
         except EmailAddress.DoesNotExist:
             send_email = True
             email_address = EmailAddress.objects.add_email(request,
                                                            user,
+                                                           type,
                                                            email,
                                                            signup=signup,
                                                            confirm=True)

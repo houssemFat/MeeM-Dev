@@ -26,6 +26,12 @@ define([
            this.$el.html(this.template(this.model.toJSON()));
            return this.$el;
         },
+    /**
+     * 
+     */
+    close : function (){
+        this.remove ();
+    },
         /**
          * 
          * @param {Object} e

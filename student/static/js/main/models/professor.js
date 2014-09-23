@@ -9,7 +9,7 @@ define([
         /**
          * 
          */
-        urlRoot : '/j/professor' ,
+        urlRoot : '/j/teacher' ,
         /**
          * 
          */

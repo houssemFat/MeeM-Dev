@@ -59,14 +59,14 @@ define([
             data: $('form', this.el).serialize(),
             success : function (data) {
                 if (data.status === "Error"){
-                    scope.serverLoginErrror (data.message);
+                    scope.serverLoginErrror (data.message, $currentTarget);
                 }
                 else {
                     window.location.replace(__CONFIG__.baseUrl);
                 }
             },
             error : function (data){
-                scope.serverLoginErrror (data);
+                scope.serverLoginErrror (data, $currentTarget);
             }
         });
     },
@@ -76,10 +76,10 @@ define([
     /**
      * Intercept server error
      */
-    serverLoginErrror : function (message){
+    serverLoginErrror : function (message, $button){
         this.$registerErrorText.html(message);
         this.$registerError.show ();
-        this.$button.html ('الاشتراك');
+        $button.html (common.tr('Enter'));
     },
     /**
      * 

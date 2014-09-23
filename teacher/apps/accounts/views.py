@@ -112,7 +112,7 @@ class ConfirmEmailView(TemplateResponseMixin, View):
         if self.request.method == 'POST':
             return ["accounts/teacher/email_confirmed.html"]
         else:
-            return ["accounts/professor/email_confirm.html"]
+            return ["accounts/teacher/email_confirm.html"]
 
     def get(self, *args, **kwargs):
         try:
@@ -139,7 +139,7 @@ class ConfirmEmailView(TemplateResponseMixin, View):
         from core.apps.tools.common import add_message
         add_message(self.request,
                                    messages.SUCCESS,
-                                   'accounts/professor/messages/email_confirmed.txt',
+                                   'accounts/teacher/messages/email_confirmed.txt',
                                    {'email': confirmation.email_address.email})
         return redirect(redirect_url)
 

@@ -3,7 +3,7 @@ define([
   'underscore', 
   'backbone',
   'app',
-  'text!scripts/main/templates/professor/item.html',
+  'text!scripts/main/templates/teacher/item.html',
   ], function($, _, Backbone, App, template)  {
 
   return Backbone.View.extend({
@@ -32,7 +32,7 @@ define([
          */
         view : function(e){
             e.preventDefault();
-            Backbone.history.navigate('professor/' + this.model.id, true);
+            Backbone.history.navigate('teacher/' + this.model.id, true);
         }
   });
 });

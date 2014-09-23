@@ -176,14 +176,14 @@ class Profile(models.Model):
     country = models.ForeignKey(Country, db_column="country_id", blank=True, null=True)
     state = models.ForeignKey(State, db_column="state_id", blank=True, null=True)
     region = models.ForeignKey(Region, db_column="region_id", blank=True, null=True)
-    address = models.CharField(max_length=255, null=True)
-    bio = models.CharField(max_length=255, null=True)
-    skills = models.CharField(max_length=255, null=True)
-    hobbies = models.CharField(max_length=255, null=True)
-    cover = models.FileField(upload_to=upload_cover)
-    twitter_link = models.CharField(max_length=255, null=True)
-    facebook_link = models.CharField(max_length=255, null=True)
-    google_plus_link = models.CharField(max_length=255, null=True)
+    address = models.CharField(max_length=255, null=True, blank=True)
+    bio = models.CharField(max_length=255, null=True, blank=True)
+    skills = models.CharField(max_length=255, null=True,  blank=True)
+    hobbies = models.CharField(max_length=255, null=True,  blank=True)
+    cover = models.FileField(upload_to=upload_cover, null=True,  blank=True)
+    twitter_link = models.CharField(max_length=255, null=True,  blank=True)
+    facebook_link = models.CharField(max_length=255, null=True,  blank=True)
+    google_plus_link = models.CharField(max_length=255, null=True,  blank=True)
     
     class Meta:
         db_table = 'accounts_profile'
@@ -210,7 +210,7 @@ class NotificationsSettings(models.Model):
      
 @python_2_unicode_compatible
 class EmailAddressManager(models.Manager):
-    def add_email(self, request, user, email, **kwargs):
+    def add_email(self, request, user, type, email, **kwargs):
         confirm = kwargs.pop("confirm", False)
         signup = kwargs.pop("signup", False)
         try:
@@ -219,8 +219,7 @@ class EmailAddressManager(models.Manager):
             return None
         else:
             if confirm and not email_address.verified:
-                email_address.send_confirmation(request,
-                                                signup=signup)
+                email_address.send_confirmation(request, type, signup=signup)
             return email_address
 
     def get_primary(self, user):
@@ -269,9 +268,9 @@ class EmailAddress(models.Model):
         self.user.save()
         return True
 
-    def send_confirmation(self, request, site, type = 'professor', signup=False):
+    def send_confirmation(self, request, type = 'student', signup=False):
         confirmation = EmailConfirmation.create(self)
-        confirmation.send(request, site, type , signup=signup)
+        confirmation.send(request,  type , signup=signup)
         return confirmation
 
     def change(self, request, new_email, confirm=True):
@@ -345,14 +344,14 @@ class EmailConfirmation(models.Model):
             email_address.save()
             return email_address
 
-    def send(self, request, site, type="professor",  signup=False, **kwargs):
+    def send(self, request,  type="teacher",  signup=False, **kwargs):
         #current_site = kwargs["site"] if "site" in kwargs else Site.objects.get_current()
         activate_url = reverse("account_" + type + "_confirm_email", args=[self.key])
         activate_url = request.build_absolute_uri(activate_url)
         args = {
             "user": self.email_address.user,
             "activate_url": activate_url,
-            "site": site,
+            "site": None,
             "key": self.key,
         }
         if signup:

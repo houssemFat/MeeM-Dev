@@ -1,63 +1,85 @@
 @-ms-keyframes item-nav-hover {
-  from {
-   	background-color :  #0E90D2;
-  }
-  to {
-    background-color : #007FB1;
-  }
+from {
+	background-color: #0E90D2;
 }
-@-o-keyframes item-nav-hover {
-  from {
-   	background-color :  #0E90D2;
-  }
-  to {
-    background-color : #007FB1;
-  }
+to {
+	background-color: #007FB1;
 }
-@-moz-keyframes item-nav-hover {
-  from {
-   	background-color :  #0E90D2;
-  }
-  to {
-    background-color : #007FB1;
-  }
 }
-@-webkit-keyframes item-nav-hover {
-  from {
-   	background-color :  #0E90D2;
-  }
-  to {
-    background-color : #007FB1;
-  }
+@-o-keyframes
+item-nav-hover {from {
+	background-color: #0E90D2;
 }
-@keyframes item-nav-hover {
-  from {
-   	background-color :  #0E90D2;
-  }
-  to {
-    background-color : #007FB1;
-  }
+to {
+	background-color: #007FB1;
 }
-.nav-item  a{
+}
+@-moz-keyframes
+item-nav-hover {from {
+	background-color: #0E90D2;
+}
+to {
+	background-color: #007FB1;
+}
+}
+@-webkit-keyframes
+item-nav-hover {from {
+	background-color: #0E90D2;
+}
+to {
+	background-color: #007FB1;
+}
+}
+@keyframes
+item-nav-hover {from {
+	background-color: #0E90D2;
+}
+to {
+	background-color: #007FB1;
+}
+}
+.nav-item  a , .nav-item:hover a {
 	color: #FFFFFF !important;
 }
-.nav-item:hover a{
-	color: #FFFFFF !important;
-}
-.nav-item-middle{
+.nav-item-middle {
 	margin-left: 2px;
 	margin-right: 2px;
 }
-.nav-item:hover{
+.nav-item:hover {
 	-webkit-animation: item-nav-hover 5s linear;
-     -moz-animation: item-nav-hover 5s linear;
-      -ms-animation: item-nav-hover 5s linear;
-       -o-animation: item-nav-hover 5s linear;
-          animation: item-nav-hover 5s linear;
+	-moz-animation: item-nav-hover 5s linear;
+	-ms-animation: item-nav-hover 5s linear;
+	-o-animation: item-nav-hover 5s linear;
+	animation: item-nav-hover 5s linear;
 }
-.nav-item.active{
-	background-image:url('/static/img/icons/arrow-blue.png');
-	background-repeat:no-repeat;
-	background-position-x:0px;
-	background-position-y:40px;
+.nav-item.active {
+	background-image: url('/static/img/icons/arrow-blue.png');
+	background-repeat: no-repeat;
+	background-position-x: 0px;
+	background-position-y: 40px;
+}
+#user_menu #nav_user_menu  ul.list-unstyled {
+	position: absolute;
+	width: 100%;
+	float: left;
+	left: 0px;
+	padding: 0pw;
+	text-align: left;
+	padding: 15px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: #5FCAB5;
+	display: none;
+	z-index: 2
+}
+#user_menu #nav_user_menu:hover > ul.list-unstyled {
+	display: block;
+}
+#user_menu #nav_user_menu > ul > li {
+	padding: 5px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+#user_menu #nav_user_menu > ul > li >	 a {
+	color: #ffffff !important;
 }
