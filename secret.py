@@ -21,5 +21,6 @@ DATABASES = {
 #EMAIL_HOST_PASSWORD = 'smtp account user' 
 #EMAIL_PORT = 587
 
+# your no reply name
 EMAIL_NO_REPLY = 'no-reply@example.ex'
 MANDRILL_API_KEY  = "Your mandrill app key"
