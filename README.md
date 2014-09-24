@@ -8,7 +8,7 @@ MeeM is a Mooc (massive open online courses) management web application.
   - Teachers collaboration and tasks management
   - Students statistics and evaluations
 
-> The origin of meem was to provide a sample mooc plateforme for tunsian and arabic teachers to collaborate for providing ideas and new tools for education.
+> The origin of meem was to provide a mooc plateform for tunsian and arabic teachers to collaborate for providing ideas and new tools for education.
 
 Sample Demo :
 --------------
