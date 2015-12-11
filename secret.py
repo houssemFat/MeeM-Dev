@@ -19,7 +19,7 @@ EMAIL_USE_TLS = True
 EMAIL_NO_REPLY = 'meem-noreply@meem.org'
 #EMAIL_HOST = 'smtp.mandrillapp.com'
 #EMAIL_HOST_USER = 'meemCompany@gmail.com'
-#EMAIL_HOST_PASSWORD = 'MeeMC-24/05/0902&&' 
+#EMAIL_HOST_PASSWORD = '**' 
 #EMAIL_PORT = 587
 
-MANDRILL_API_KEY  = "whYHdOEThHi7VFzDBwgzuQ"
+MANDRILL_API_KEY  = "***"
