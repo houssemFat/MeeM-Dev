@@ -1,0 +1,1 @@
+{% include "accounts/teacher/email/email_confirmation_message.txt" %}

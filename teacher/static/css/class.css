@@ -1,0 +1,16 @@
+.app-class-chapter-prog{
+	background-color: #35B8F0;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	position: relative;	
+}
+.app-class-chapter-prog-c{
+	background-color: #DEE5E8;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	text-align: center;
+	vertical-align: middle;
+	overflow: hidden;
+}

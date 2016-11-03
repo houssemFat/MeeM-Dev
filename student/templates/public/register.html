@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% load i18n  %}
+{% load url from future %}
+
+{% block extrahead %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/js/register/register.js"></script>
+{% endblock %}
+
+<!-- title -->
+{% block title %} register {% endblock %}
+{% block content %}
+<h5>Are you</h5>
+    <div>
+        <ul>
+            <li>
+                <h3>A Professor </h3>
+            </li>
+        </ul>
+         <ul>
+            <li>
+                <h3>A Student </h3>
+            </li>
+        </ul>
+    </div>    
+{% include "public/body.html" %}
+    <form class="form-horizontal" id="register_form" role="form" method="POST" action="{% url 'account_signup' %}">
+         {% csrf_token %}
+      <div class="form-group">
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="username" name="username" placeholder='{% trans "Username" %}'>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-10">
+          <input type="email" class="form-control" id="inputEmail1" name="email" placeholder='{% trans "Email address" %}' autocomplete="off">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-10">
+          <input type="password" class="form-control" name="password1" placeholder='{% trans "Password" %}' autocomplete="off">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-10">
+          <input type="password" class="form-control" name="password2" placeholder='{% trans "Password (again)" %}'>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-10">
+            <input type="checkbox" name="read_contract"> <span style="font-size: 10">{% trans "ReadTOS" %}</span>
+            <button type="submit" class="btn btn-success">{% trans "Create" %}</button>
+        </div>
+      </div>
+    </form>
+    
+{% endblock %}

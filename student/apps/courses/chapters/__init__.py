@@ -1,0 +1,1 @@
+default_app_config = 'student.apps.courses.chapters.apps.AppConfig'

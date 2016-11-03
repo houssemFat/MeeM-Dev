@@ -1,0 +1,31 @@
+<div id="login_modal" class="app-modal" style="display: none;width:400px">
+    <div  class="app-modal-title">
+        <span id="title" class="app-hand text">Please Login <i class="fa fa-stack-1x"></i></span>
+        <span class="app-top-modal-close app-modal-close">x</span>
+    </div>
+    <div class="app-modal-body">
+        <form  method="post">
+            
+            <div class="form-group">
+                   <label class="sr-only" for="exampleInputEmail">Username</label>                 
+                   <input class="form-control" id="exampleInputEmail" placeholder="Email address" 
+                   required="required" name="LoginForm[username]" type="text">                
+            </div>
+            
+            <div class="form-group">
+               <label class="sr-only" for="exampleInputPassword">Password</label>                  
+               <input class="form-control" id="exampleInputPassword" placeholder="password" 
+               required="required" name="LoginForm[password]" type="password">                       
+               <span for="rememberme">Stay logged in</span>
+                   <input id="ytLoginForm_rememberMe" type="hidden" value="0" name="LoginForm[rememberMe]">
+                   <input name="LoginForm[rememberMe]" id="LoginForm_rememberMe" value="1" type="checkbox">                 </div>
+            
+            <div class="form-group">
+                <div class="row buttons text-center">
+                    <button type="submit" id="loginButton" class="btn btn-primary">Enter</button>
+                    <a id="singup" >or <span class="btn btn-warning">Sign up</span></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

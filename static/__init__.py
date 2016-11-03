@@ -1,0 +1,1 @@
+# static module for seriving js , css and image fileds 

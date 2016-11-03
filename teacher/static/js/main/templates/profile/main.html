@@ -1,0 +1,149 @@
+<div  id="profile_container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="well profile">
+                <button id="edit" class="btn-primary pull-right">
+                    <i class="fa fa-pencil"></i> Edit
+                </button>
+                <div class="col-sm-12">
+                    <div class="col-xs-12 col-sm-8">
+                        <h2 mvb-attr="username"><%= username %></h2>
+                        <h2 mvb-attr="name|lastname"><%= name %> <%= lastname %></h2>
+                        <p>
+                            <strong>About: </strong><span mvb-attr="bio"><%= bio %></span>
+                        </p>
+                        <p>
+                            <strong>Hobbies: </strong>
+                            <span id="hobbies_view">
+                                <% var hobbies_ = hobbies.split(','); for (i in hobbies_){%><span class="tags"><%= hobbies_[i] %></span> <%}%> 
+                            </span>
+                        </p>
+                        <p>
+                            <strong>Skills: </strong>
+                            <span id="skills_view"> 
+                            <% var skills_ = skills.split(','); for (i in skills_){%><span class="tags"><%= skills_[i] %></span> <%}%> 
+                            </span>
+
+                        </p>
+                        <p>
+                            <strong>Social: </strong>
+                            <a class="social-link" mvb-on="href" mvb-attr="facebook_link"  href="<%= facebook_link %>" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a class="social-link" mvb-on="href" mvb-attr="twitter_link" id="twitter_link" href="<%= twitter_link %>" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a class="social-link" mvb-on="href" mvb-attr="google_plus_link" id="google_plus_link" href="<%= google_plus_link %>" target="_blank"><i class="fa fa-google-plus"></i></a>
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 text-center">
+                        <figure>
+                            <div class="change-pic-container text-center">
+
+                                <div class="change-profile-pic text-center app-hand">
+                                    <div class="app-profile-pic-upload" id="cover_file">
+                                        <i class="fa fa-upload fa-2x"></i>
+                                    </div>
+                                </div>
+                                <img src="<%= cover %>" error="<%= cover %>" alt="" id="cover_image" class="img-circle img-responsive">
+                                <figcaption class="ratings">
+                                    <p>
+                                        Ratings <a href="#"> <span class="fa fa-star"></span> </a>
+                                        <a href="#"> <span class="fa fa-star"></span> </a>
+                                        <a href="#"> <span class="fa fa-star"></span> </a>
+                                        <a href="#"> <span class="fa fa-star"></span> </a>
+                                        <a href="#"> <span class="fa fa-star-o"></span> </a>
+                                    </p>
+                                </figcaption>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-xs-12 divider text-center">
+                    <div class="col-xs-12 col-sm-4 emphasis">
+                        <h2><strong> 20,7K </strong></h2>
+                        <p>
+                            <small>Followers</small>
+                        </p>
+                        <button class="btn btn-success btn-block">
+                            <span class="fa fa-plus-circle"></span> Follow
+                        </button>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 emphasis">
+                        <h2><strong>245</strong></h2>
+                        <p>
+                            <small>Following</small>
+                        </p>
+                        <button class="btn btn-info btn-block">
+                            <span class="fa fa-user"></span> View Profile
+                        </button>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 emphasis">
+                        <h2><strong>43</strong></h2>
+                        <p>
+                            <small>Teams</small>
+                        </p>
+                        <button class="btn btn-primary btn-block">
+                            <span class="fa fa-users"></span> View Teams
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="" id="profile_container_edit">
+    <div class="row">
+        <form action="" autocomplete="off" method="POST">
+            <div class="col-lg-12">
+                <div class="well profile">
+                    <button id="save" class="btn-primary pull-right">
+                        <i class="fa fa-pencil"></i> Save
+                    </button>
+                    <div class="col-sm-12">
+                        <div class="col-xs-12 col-sm-8">
+                            <div class="row">
+                                <div class="col-xs-6 col-lg-6 ">
+                                    <strong>Your name : </strong>
+                                    <input   class="form-control" id="name" name="name" value="<%= name %>"/>
+                                </div>
+                                <div class="col-xs-6 col-sm-12 col-lg-6">
+                                    <strong>Your name : </strong>
+                                    <input   class="form-control" id="lastname" name="lastname" value="<%= lastname %>"/>
+                                </div>
+                            </div>
+                            <p>
+                                <strong>About: </strong>
+                                <textarea   class="form-control" id="bio" name="bio" ></textarea>
+                            </p>
+                            <p>
+                                <strong>Skills & domains: </strong>
+                                <textarea   class="form-control" id="skills" name="skills" ></textarea>
+                            </p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <strong>linkes : </strong>
+                            <p class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-facebook"></i></span>
+                                <input type="text" class="form-control" id="facebook_link" name="facebook_link" placeholder="facebook">
+                            </p>
+                            <span class="help-block"></span>
+
+                            <p class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-google-plus"></i></span>
+                                <input  class="form-control" id="google_plus_link" name="google_plus_link"  placeholder="Google plus">
+                            </p>
+
+                            <p class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-twitter"></i></span>
+                                <input class="form-control" id="twitter_link" name="facebook_link" placeholder="Twitter">
+                            </p>
+                            <p>
+                                <strong>Hobbies : </strong>
+                                <textarea   class="form-control" id="hobbies" name="hobbies"></textarea>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

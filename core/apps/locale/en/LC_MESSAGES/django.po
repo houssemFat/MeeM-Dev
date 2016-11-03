@@ -1,0 +1,35 @@
+# This file is free for use
+# Fathallah houssem <fathallah.houssem@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Project-Id-Version: MeeM\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.6.5\n"
+
+#: templates/accounts/professor/email/email_confirmation_message.html
+#: templates/accounts/professor/email/email_confirmation_message.txt
+msgid ""
+"Hello %(username)s, please activate your account by clicking to the link "
+"below."
+msgstr ""
+"Hello %(username)s, please activate your account by clicking to the link "
+"below."
+
+#: templates/accounts/professor/email/email_confirmation_message.html
+#: templates/accounts/professor/email/email_confirmation_message.txt
+msgid "Hello"
+msgstr "Hello"
+
+#: templates/accounts/professor/email/email_confirmation_message.html
+#: templates/accounts/professor/email/email_confirmation_message.txt
+msgid "Activate"
+msgstr "Activate"

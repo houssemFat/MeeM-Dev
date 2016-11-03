@@ -1,0 +1,32 @@
+{% extends "tbase.html" %}
+
+{% load i18n %}
+{% load url from future %}
+
+{% block head_title %}{% trans "Make me Teacher" %}{% endblock %}
+
+{% block content %}
+<form action="{% url 'teacher_account_singup' %}" class="email_list" method="post">
+    {% csrf_token %}
+    <input name="password" class="form-control" placeholder="Password" maxlength="255" type="password">
+    <input name="cin" class="form-control" placeholder="CIN" maxlength="8" type="number">
+    <input class="btn btn-success" type="submit" value="Upgrade  now">
+</form>
+
+{% endblock %}
+
+{% block endscripts %}
+<script type="text/javascript">
+    (function() {
+        var message = "{% trans 'Do you really want to remove the selected e-mail address?' %}";
+        var actions = document.getElementsByName('action_remove');
+        if (actions.length) {
+            actions[0].addEventListener("click", function(e) {
+                if (! confirm(message)) {
+                    e.preventDefault();
+                }
+            });
+        }
+    })(); 
+</script>
+{% endblock %}

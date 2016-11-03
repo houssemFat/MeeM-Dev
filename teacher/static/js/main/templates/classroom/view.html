@@ -1,0 +1,43 @@
+<div>
+    <!-- list of chapters  -->    
+    <h3 class="text-info">
+        <div class="app-t-student-cover-container">
+                    <img onerror="this.src='<%=defaultCover%>'"  class="img-responsive app-t-student-cover"
+                        src="<%=coverUrl%><%=id%>/<%profile.thamb_img_url%>">    
+                </div>
+                
+       <span><%= last_name %> <%= name %></span>
+       
+        <small>                
+            <div class="row col-lg-12 col-sm-12 col-md-12">
+                    <ul class="list-unstyled hoz-tabs list-inline text-center">
+                        <li class="active first">
+                            <a id="view_work" for="body_work" href="#">Home works</a>
+                            <i class="icon fa fa-home">
+                            </i>
+                        </li>
+                        <li>
+                             <a id="view_statics" for="body_question" href="#">Questions</a>
+                            <i class="icon fa fa-question">
+                            </i>
+                        </li>
+                        <li class="end">
+                            <a id="send_message"   for="body_message"  href="#">
+                               Send Message
+                            </a>
+                            <i class="icon fa fa-envelope"></i>
+                        </li>
+                    </ul>
+                </div>
+        </small>
+    </h3>
+    <div id="body_work" class="row col-lg-12 tabs-body">
+        
+    </div>
+    <div id="body_question" class="row col-lg-12 tabs-body" style="display: none">
+        
+    </div>
+    <div id="body_message" class="row col-lg-12 tabs-body"  style="display: none">
+        
+    </div>
+</div>

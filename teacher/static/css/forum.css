@@ -1,0 +1,17 @@
+.app-forum-thread-children{
+	padding: 5px;
+}
+.app-forum-thread-children:hover{
+	background-color: #FCF8E3;
+}
+body { padding-top:30px; }
+.app-thread .panel-body { padding:0px; }
+.app-thread .list-group { margin-bottom: 0; }
+.app-thread .panel-title { display:inline }
+.app-thread .label-info { float: right; }
+.app-thread li.list-group-item {border-radius: 0;border: 0;border-top: 1px solid #ddd;}
+.app-thread li.list-group-item:hover { background-color: rgba(86,61,124,.1); }
+.app-thread .mic-info { color: #666666;font-size: 11px; }
+.app-thread .action { margin-top:5px; }
+.app-thread .comment-text { font-size: 12px; }
+.app-thread .btn-block { border-top-left-radius:0px;border-top-right-radius:0px; }

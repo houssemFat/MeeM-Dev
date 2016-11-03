@@ -1,0 +1,15 @@
+<li class="list-group-item">
+    <div>
+        <span id="filename" class="label label-primary app-hand"> <%= title %> </span>
+        <input id="edit_filename" class="form-control" style="display: none" value="<%= title %>"/> 
+        <i class="fa fa-clock-o"> <%= created %> </i>
+        <div class="pull-left">
+          <i class="fa fa-download">
+              <a href="/media/download/document/<%= id %>">
+                  download
+              </a>
+          </i>
+        </div>
+    </div>
+    
+</li>

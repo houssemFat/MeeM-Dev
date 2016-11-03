@@ -1,0 +1,88 @@
+{% extends "tbase.html" %}
+{% load i18n %}
+{% block extrahead %}
+<script src="{{ STATIC_URL }}js/vender/require/require.js" data-main="{{ STATIC_URL }}t/js/common/main.js"></script>
+{% endblock %}
+{% load url from future %}
+{% load i18n %}
+{% block custom-header %}
+{% include "thome/header-out.html" %}
+{% endblock %}
+{% block title %}{% trans "Account" %}{% endblock %}
+
+{% block content %}
+<div>
+    {{ form.errors }}
+    <div class="col-lg-12">
+        <div class="col-lg-7">
+            <legend>
+                {% trans "New Account" %}
+            </legend>
+            <form class="form-horizontal" id="register_form" role="form" method="POST" action="{% url 'teacher_account_singup'%}" >
+                {% csrf_token %}
+                <div class="form-group">
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="username" name="username" data-tr="Username" data-tr-for='val'/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-10">
+                        <input type="email" class="form-control" id="inputEmail1" name="email" placeholder='{% trans "Email address" %}' autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10">
+                        <input type="password" class="form-control" name="password1" placeholder='{% trans "Password" %}' autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-10">
+                        <input type="password" class="form-control" name="password2" placeholder='{% trans "Password (again)" %}'>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        <input type="checkbox" name="read_contract">
+                        <span style="font-size: 10">{% trans "ReadTOS" %}</span>
+                        <button type="submit" class="btn btn-success">
+                            {% trans "Create" %}
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="col-lg-5">
+            
+            <legend>
+                {% trans "Login" %}
+            </legend>
+            <form class="form-horizontal" id="register_form" role="form" method="POST" action="{% url 'teacher_account_login'%}" >
+                {% csrf_token %}
+                <div class="form-group">
+                    <div class="col-lg-10">
+                        <input type="email" class="form-control" id="inputEmail1" name="email" placeholder='{% trans "Email address" %}' autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10">
+                        <input type="password" class="form-control" name="password" placeholder='{% trans "Password" %}' autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        <input type="checkbox" name="remember" value="1" id="login_remember">
+                        Remember me</label>
+                        <button type="submit" class="btn btn-success">
+                            {% trans "Singup" %}
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

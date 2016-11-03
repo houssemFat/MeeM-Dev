@@ -1,0 +1,17 @@
+{% extends "tbase.html" %}
+{% load url from future %}
+
+{% load i18n %}
+{% block title %}{% trans "Business" %}{% endblock %}
+
+{% block custom-header %}
+{% if not user.is_authenticated %}
+{% include "thome/header-out.html" %}
+{% else %}
+{% include "thome/header-in.html" %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+BUSINESS
+{% endblock %}

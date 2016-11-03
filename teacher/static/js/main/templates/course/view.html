@@ -1,0 +1,21 @@
+<div class="panel-body">
+    <button id="edit" class="btn btn-primary pull-left"><i class="fa fa-edit"></i> <span><%= common.tr('edit') %></span> </button>
+    <h1><%= title %></h1>
+         
+    <h5><%= short_description %></h5>
+    <div class="course-thumbnail-container pull-left">
+        <img src='<%=cover%>' error="http://joern-duwe.de/aquaristik/images/skalare00.jpg" alt="post img" class="img-responsive course-thumbnail img-thumbnail">
+        <div id="change_cover" class="course-thumbnail-change text-center">
+             <button class="btn btn-success"><i class="fa fa-camera fa-2x"></i> </button>
+         </div>
+    </div>
+    <article>
+        <p>
+            <%= about %>
+        </p>
+        <h3><% created %> </h3>
+        <br>
+        <iframe width="100%" height="480" src="//www.youtube.com/embed/Bn_d-ghQ5HA" frameborder="0" allowfullscreen=""></iframe>
+
+    </article>
+</div>

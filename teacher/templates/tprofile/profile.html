@@ -1,0 +1,42 @@
+{% extends "tbase.html" %}
+{% load url from future %}
+
+{% load i18n %}
+{% block title %}{% trans "Profile" %}{% endblock %}
+
+{% block custom-header %}
+{% include "thome/header-in.html" %}
+{% endblock %}
+{% block content %}
+<div class="row ">
+    <div class="col-md-2 profile-menu">
+        <ul class="nav nav-pills nav-tabs">
+            <li></li>
+            <li class="active">
+                <a href="#profile" data-toggle="tab"><i class="fa fa-user"></i> Profile </a>
+            </li>
+            <li>
+                <a href="#informations" data-toggle="tab"><i class="fa fa-user"></i> Informations </a>
+            </li>
+            <li>
+                <a href="#emails" data-toggle="tab"><i class="fa fa-envelope"></i> Emails</a>
+            </li>
+            <li>
+                <a href="#security" data-toggle="tab"><i class="fa fa-key"></i> Security</a>
+            </li>
+            <li>
+                <a href="#password" data-toggle="tab"><i class="fa fa-key"></i> Password</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <div class="tab-content">
+            {% include "tprofile/components/profile.html" %}
+            {% include "tprofile/components/informations.html" %}
+            {% include "tprofile/components/emails.html" %}
+            {% include "tprofile/components/security.html" %}
+            {% include "tprofile/components/password.html" %}
+        </div>
+    </div>
+</div>
+{% endblock %}

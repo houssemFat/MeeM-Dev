@@ -1,0 +1,2 @@
+{% load i18n %}
+{% blocktrans %}{{username}} invite yout to be a collaborator .{% endblocktrans %}

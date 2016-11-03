@@ -1,0 +1,54 @@
+{% extends "theader.html" %}
+{% block header-top-menu %}
+{% load i18n %}
+<li id="top_nav_items" style="display: none">
+     <ul class="list-inline list-unstyled nav navbar-nav">
+         <li>
+             <a href="dashboard"> <i class="fa fa-gears"> </i> </a>
+         </li>
+         <li>
+             <a href="course/list"> <i class="fa fa-suitcase"> </i> </a>
+         </li>
+         <li>
+             <a href="collaboration"> <i class="fa fa-users"> </i> </a>
+         </li>
+         <li>
+             <a href="inbox"> <i class="fa fa-envelope"> </i> </a>
+         </li>
+     </ul>
+</li>
+
+<li class="page-scroll" id="notifcation_btn">
+    <a href="#"  class="dropdown-toggle"> <i class="fa fa-bell-o"></i> </a>
+</li>
+<li class="page-scroll">
+    <button  class="btn btn-sm animate-start-guide" id="start_toor" tr-value="discover"></button>
+</li>
+<li>
+    <ul class="app-hover-list nav navbar-nav list-unstyled" id="top_nav_menu">
+        <li class="page-scroll">
+            <a href="/teacher/"> <i class="fa fa-gear"></i> {{ user.username}}</a>
+            <ul class="list-unstyled dropdown-menu dropdown-menu-right">
+                <li class="list-group-item-text">
+                    <a href="/teacher/account/profile" id="profile">الحساب</a>
+                </li>
+                <li class="list-group-item-text">
+                    <a href="/teacher/account/settings" id="settings" tr-value="Settings"></a>
+                </li>
+                <hr>
+                 <li class="list-group-item-text">
+                    <a href="/teacher/account/logout">خروج</a>
+                </li>
+                <hr>
+                <li class="list-group-item-text">
+                    <a href="/company/terms-of-services" >عن ميم</a>
+                </li>
+                <li class="list-group-item-text">
+                    <a href="/company/about" >عن ميم</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</li>
+{% endblock %}

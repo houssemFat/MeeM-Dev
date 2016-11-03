@@ -1,0 +1,140 @@
+<div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-lg-10">
+                    <span class="panel-title"><%=title%></span>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <div class="btn-group btn-group-sm">
+                        <button class="btn btn-default" data-toggle="tab" href="#info">
+                            <span class="sr-only" <%= common.tr('task')%>></span>
+                            <i class="fa fa-calendar"></i>
+                        </button>
+                        <button class="btn btn-default" data-toggle="tab" href="#users">
+                            <span class="sr-only" <%= common.tr('peoples')%>></span><i class="fa fa-user"></i>
+                        </button>
+                        <button class="btn btn-default" data-toggle="tab" href="#teams">
+                            <span class="sr-only" <%= common.tr('teams')%>></span><i class="fa fa-users"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body tab-content">
+            <div class="tab-pane fade active in" id="info">
+                <!-- Task Form -->
+                <!-- name -->
+                <div class="control-group">
+                    <label class="control-label" for="event_title"><h3><span class="semi-bold"><%=common.tr("Title")%></span> &nbsp;<i class="fa fa fa-bookmark" style="color: #<%=label.color%>" id="my_label"></i> &nbsp; </h3></label>
+                    <div class="controls">
+                        <input required="" id="event_title" name="event_title" type="text" class="form-control"  placeholder="<%=title%>" class="input-medium" required="">
+                    </div>
+                </div>
+                <!-- name -->
+                <div class="control-group">
+                    <label class="control-label" for="selected_team"><h3><span class="semi-bold"><%=common.tr("Team")%></span> &nbsp; </h3></label>
+                    <div class="controls">
+                        <select required="" id="selected_team" name="selected_team"   class="form-control" required="">
+                            <% for (var i = 0 ; i < teams.length ; i++) { %> <option value="<%= teams[i].id %>"><%= teams[i].name %></option> <% } %>
+                        </select>
+                    </div>
+                </div>
+                <!-- color label -->
+                <div class="control-group">
+                    <label class="control-label" ><h3><span class="semi-bold"><%=common.tr("Colors")%></span></h3></label>
+
+                    <br>
+                    <div class="col-lg-12 text-center" id="labels">
+                        <div class="app-scheduler-event-label">
+                            <div class="app-scheduler-event-color btn-default">
+                                <i class="fa fa-plus"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        <small>تشير الألوان على أهمية المهمة.</small>
+                    </p>
+                </div>
+
+                <!-- progress label -->
+                <div class="control-group">
+                    <label class="control-label" ><h3><span class="semi-bold"><%=common.tr("Progress")%></span></h3></label>
+                    <div class="clearfix"></div>
+                    <div class="progress active app-hand" id="slider_event_progress">
+                        <div class="progress-bar" style="width: 36%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="users">
+                <div class="list-group">
+                    <input type="text" class="form-control" id="contact-list-search"  placeholder="<%= common.tr('quick search') %>">
+                </div>
+                <div class="list-group task-list">
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="http://api.randomuser.me/portraits/men/97.jpg" alt="Seth Frazier" class="img-responsive img-circle">
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="http://api.randomuser.me/portraits/men/15.jpg" alt="Seth Frazier" class="img-responsive img-circle">
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="http://api.randomuser.me/portraits/men/47.jpg" alt="Seth Frazier" class="img-responsive img-circle">
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="http://api.randomuser.me/portraits/men/42.jpg" alt="Seth Frazier" class="img-responsive img-circle">
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="http://api.randomuser.me/portraits/men/13.jpg" alt="Seth Frazier" class="img-responsive img-circle">
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="http://api.randomuser.me/portraits/men/18.jpg" alt="Seth Frazier" class="img-responsive img-circle">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+
+            <div class="tab-pane fade" id="teams">
+                <div class="list-group">
+                    <input type="text" class="form-control" id="contact-list-search"  placeholder="<%= common.tr('quick search') %>">
+                </div>
+
+                <div class="list-group task-list">
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="http://www.gravatar.com/avatar/126?d=identicon&f=y" alt="Seth Frazier" class="img-responsive img-circle">
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="http://www.gravatar.com/avatar/186?d=identicon&f=y" alt="Seth Frazier" class="img-responsive img-circle">
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="http://www.gravatar.com/avatar/16?d=identicon&f=y" alt="Seth Frazier" class="img-responsive img-circle">
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="http://www.gravatar.com/avatar/106?d=identicon&f=y" alt="Seth Frazier" class="img-responsive img-circle">
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="http://www.gravatar.com/avatar/5?d=identicon&f=y" alt="Seth Frazier" class="img-responsive img-circle">
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <img src="http://www.gravatar.com/avatar/36?d=identicon&f=y" alt="Seth Frazier" class="img-responsive img-circle">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <center>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <%=common.tr ('Close')%>
+                </button>
+                <button type="button" class="btn btn-default" id="confirm">
+                    <%=common.tr ('Save')%>
+                </button>
+            </center>
+        </div>
+    </div>
+</div>

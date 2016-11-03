@@ -1,0 +1,1 @@
+﻿insert into public_language (code, value) values ('fr', 'français'),  ('ar', 'العربية'),  ('en', 'English'),  ('nl', 'Dutch') ;

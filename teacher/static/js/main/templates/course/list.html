@@ -1,0 +1,28 @@
+<div class="list-group" id="list_view">
+    <div class="col-sm-4 col-md-4" id="add_new">
+        <a href="course/new" id="create" class="btn btn-large btn-warning">New course</a>
+    </div>
+</div>
+<div class="text-center" id="list_empty" style="display: none">
+    <h1><%= common.tr ('Welcome!') %> </h1>
+    <div class="col-xs-12 col-sm-12 col-lg-6 col-lg-offset-3 col-xs-offset-3">
+        <div class="app-course-media-box">
+            <div class="icon">
+                <div class="image">
+                    <i class="fa fa-wrench"></i>
+                </div>
+                <div class="info">
+                    <p>
+                        MeeM is a at the begening phase, we have no enough ressources to store media,
+                        your production will be public
+                        <%= MMC.tr('specify a link to your video or any other provider')%>
+                    </p>
+                    <h4 class="title"><%= MMC.tr('use a third party')%></h4>
+                    
+                   
+                </div>
+            </div>
+            <div class="space"></div>
+        </div>
+    </div>
+</div>

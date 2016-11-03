@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+        <div class="app-course-media-box">
+            <div class="icon">
+                <div class="image">
+                    <i class="fa fa-cloud-upload"></i>
+                </div>
+                <div class="info">
+                    <h2><%= MMC.tr('use a third party')%></h2>
+                    <p><%= MMC.tr('please specify a link to your video')%></p>
+                    <ul class="list-group list-unstyled list-group-item">
+                        <li>
+                           <p><i class="fa fa-dropbox"></i> Drop Box  <input class="third-party-link form-control" link-for="dropbox"/></p>
+                        </li>
+                        <li>
+                           <p><i class="fa fa-vimeo-square"></i>   Vimeo <input class="third-party-link  form-control" link-for="vimeo"/></p>
+                        </li>
+                        <li>
+                           <p><i class="fa fa-youtube-square"></i> Youtube <input class="third-party-link  form-control" link-for="dropbox"/></p>
+                        </li>
+                    </ul>
+                    <p>
+                        <h6><small> <i class="fa fa-exclamation-circle"></i><%=common.tr('video\'s content respect the policy')%></small></h6>
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="space"></div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+        <div class="app-course-media-box">
+            <div class="icon">
+                <div class="image">
+                    <i class="fa fa-upload"></i>
+                </div>
+                <div class="info">
+                    <h2><%=MMC.tr('upload')%></h2>
+                    <p>
+                       <%=MMC.tr('Due to number of access, our storage video is limited  to 20 Mega byte for teaser and all other videos are stored in special servers')%>
+                        
+                    </p>
+                    <div class="more">
+                        <button id="upload" class="btn btn-group" >
+                            <%=MMC.tr('upload the video')%> <i class="fa fa-upload"> </i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

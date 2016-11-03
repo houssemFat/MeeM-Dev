@@ -1,0 +1,19 @@
+<li class="list-group-item">
+    <div class="form-group">
+        <label id="label"  class="col-sm-4 col-md-4 control-label text-right"><%=text%></label>
+        <input id="text" class="col-sm-4 col-md-4 control-label text-right" value="<%=text%>" style="display: none"/>
+        <div class="col-sm-7 col-md-7">
+            <div class="input-group">
+                <div id="radioBtn" class="btn-group">
+                    <a class="btn btn-primary btn-sm <% if (is_true) { %>active<% }else {%>notActive<% }%>" data-value="1">YES</a>
+                    <a class="btn btn-primary btn-sm <% if (is_true) { %>notActive<% }else {%>active<% }%>"  data-value="0">NO</a>
+                </div>
+                <input type="hidden" name="value" id="value">
+            </div>
+        </div>
+        <div class="input-group pull-rigth">
+            <button id="delete"><i class="fa fa-trash"></i></button>
+            <button id="edit"><i class="fa fa-edit"></i></button>
+        </div>
+    </div>
+</li>

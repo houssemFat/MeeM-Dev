@@ -1,0 +1,11 @@
+<li class="list-group-item">
+    <div>
+       <%= fromuser %>
+       <form action="/teacher/collaboration/invitations/<%= id %>/accept">
+           <button type="submit" id="accept" class="btn btn-success">accept</button>
+       </form>
+        <form action="/teacher/collaboration/invitations/coming/<%= id %>/decline">
+           <button type="submit" id="decline" class="btn btn-danger"><i class="fa fa-trash"></i>  decline</button>
+       </form>
+    </div>
+</li>

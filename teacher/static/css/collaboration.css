@@ -1,0 +1,61 @@
+.team-details {
+	position: relative;
+	padding: 0;
+	border: 1px solid rgb(215, 215, 215);
+	position: relative;
+	font-family: 'Lato', sans-serif;
+	overflow: hidden;
+	margin: 10px;
+}
+.team-details .team-image {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+}
+.team-image img {
+	clear: both;
+	margin: auto;
+	position: relative;
+}
+
+.team-details .team-info-block {
+	width: 100%;
+	top: 55px;
+	background: rgb(255, 255, 255);
+	z-index: 0;
+	padding-top: 5px;
+}
+.team-info-block .team-heading {
+	width: 100%;
+	text-align: center;
+	margin: 10px 0 0;
+}
+.team-info-block .navigation {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border-bottom: 1px solid #428BCA;
+	border-top: 1px solid #428BCA;
+}
+.team-navigation {
+	text-align: center;
+}
+.team-navigation a {
+	padding: 15px 15px;
+	min-width: 50px;
+}
+/* collaborator list item */
+.collaborator-team-item {
+	position: relative;
+}
+.collaborator-team-item button {
+	width: 24px;
+	height: 22px;
+	text-align: center;
+	padding-top: 2px !important;
+	padding-right: 7px !important;
+	border: none;
+	margin: 10px;
+	margin-top: 1px;
+}

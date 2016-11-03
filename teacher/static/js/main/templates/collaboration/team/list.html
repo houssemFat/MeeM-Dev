@@ -1,0 +1,52 @@
+<div>
+    <div class="panel panel-default app-thread">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-lg-10">
+                    <span class="panel-title">Teams</span>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <div class="btn-group btn-group-sm">
+                        <a href="#" class="btn btn-default" class="hide-search" data-command="toggle-search" data-toggle="tooltip" data-placement="top" title="<%= common.tr('Toggle Search')%>"><!--<i class="fa fa-ellipsis-v"></i> --> <span class="sr-only" <%= common.tr('Toggle Search')%>></span> <i class="fa fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="display: none;">
+                <div class="col-xs-12">
+                    <div class="input-group c-search">
+                        <input type="text" class="form-control app-autocomplete-value" id="classroom_auto_complete">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="fa fa-search text-muted"></span>
+                            </button> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div id="list_view">
+
+            </div>
+            <div class="clearfix"></div>
+            <div id="list_empty" style="display: none">
+                <div class="col-sm-6 col-sm-offset-3 text-center">
+                    <h1><%= common.tr ('Welcome!') %> </h1>
+                    <div class="alert alert-info">
+                        <h4><%= common.tr ('Try searching for students or send invitation it by email') %>
+                        <br>
+                        </h4>
+                        <form action="" method="post">
+                            <div class="input-prepend">
+                                <span class="add-on"><i class="fa fa-envelope"></i></span>
+                                <input id="add_collaboration_mail" type="email" id="" name="" placeholder="your@email.com">
+                            </div>
+                            <br>
+                            <input type="submit" id="empty_invite_by_mail" value="<%=MMC.tr('invite')%>" class="btn btn-large">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+# This file is free for use
+# Fathallah houssem <fathallah.houssem@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Project-Id-Version: MeeM\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.6.5\n"
+
+#: templates/accounts/professor/email/email_confirmation_message.html
+#: templates/accounts/professor/email/email_confirmation_message.txt
+msgid ""
+"Hello %(username)s, please activate your account by clicking to the link "
+"below."
+msgstr ""
+"Bienvenue %(username)s, Veuillez activez votre compte en cliquent sur le "
+"lien ci-dessous.below."
+
+#: templates/accounts/professor/email/email_confirmation_message.html
+#: templates/accounts/professor/email/email_confirmation_message.txt
+msgid "Hello"
+msgstr "Bienvenue"
+
+#: templates/accounts/professor/email/email_confirmation_message.html
+#: templates/accounts/professor/email/email_confirmation_message.txt
+msgid "Activate"
+msgstr "Activez"
+
+#: apps/accounts/stdudents/forms.py
+msgid "A user with this email already exists."
+msgstr "Un utilisateur utilise la même adresse email."
+
+#: apps/accounts/stdudents/forms.py
+msgid "A user with this phone number already exists."
+msgstr "Un utilisateur utilise ce même nombre téléphonique."
+
+#: apps/accounts/stdudents/forms.py
+msgid "Phone"
+msgstr "Téléphone"
+
+#: teacher/templates/tfooter.html
+msgid "Privacy"
+msgstr "Confidentialité"
+
+#: teacher/templates/tfooter.html
+msgid "Terms of Use"
+msgstr "Conditions d'utilisation"
+
+#: teacher/templates/tfooter.html
+msgid "Business"
+msgstr "Affaires"
+
+#: teacher/templates/theader-in.html
+msgid "dashboard"
+msgstr "tableau de bord"
+
+#: teacher/templates/theader-in.html
+msgid "courses"
+msgstr "cours"
+
+#: teacher/templates/theader-in.html
+msgid "collaborators"
+msgstr "collaborateurs"
+
+#: teacher/templates/theader-in.html
+msgid "calendar"
+msgstr "calendrier"
+
+#: teacher/templates/tfooter.html
+msgid "inbox"
+msgstr "Messages"

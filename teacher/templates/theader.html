@@ -1,0 +1,21 @@
+<nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation">
+    <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="/teacher"> <span class="visible-lg">MeeM ( إدارة الدروس ) </span> </a>
+            <!-- {% include "tcommon/search.html" %}-->
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse custom-navbar-direction navbar-main-collapse" id="nav_collapse">
+            <ul class="nav navbar-nav">
+                {% block  header-top-menu %}
+                {% endblock %}
+            </ul>
+        </div>
+
+    </div>
+
+</nav>

@@ -1,0 +1,61 @@
+<div class="col-md-12 quiz-question-item">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h5 id="question_title"><%= question %></h5>
+                </div>
+                <div class="col-lg-3 btn-group-sm text-center">
+                    <button class="btn btn-default btn-xs" id="edit_question">
+                        <i class="fa fa-pencil"></i>
+                    </button>
+                    <button class="btn btn-primary  btn-xs" id="save_question" style="display: none">
+                        <i class="fa fa-floppy-o"></i>
+                    </button>
+                    <button class="btn btn-danger btn-xs" id="delete_question">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <div id="item_details" style="display: none" class="controls">
+                    <form class="form-horizontal" role="form">
+                        <div class="col-lg-12">
+                            <input type="text" class="form-control" id="question" placeholder="your question ..." />
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="text" class="form-control" id="help" placeholder="help ..." />
+                        </div>
+                        <div class="col-lg-3">
+                            <select id="question_type" class="form-control">
+                                <option value="multiple" selected="selected">multiple choice</option>
+                                <option value="unique">single choice</option>
+                                <option value="text">only input</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2">
+                            <label class="checkbox">with Input <input type="checkbox"  id="with_input" /></label>
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="text" id="note" class="form-control" placeholder="Note ..."  autocomplete="off" maxlength="4" pattern="\d{4}" title="First four digits" required="">
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="text" id="max_attempts" class="form-control" placeholder="Max Attempts ..."  autocomplete="off" maxlength="4" pattern="\d{4}" title="First four digits" required="">
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="panel-body">
+            R List
+            <ul class="list-group" id="response_list">
+
+            </ul>
+            <div class="input-group input-group-option col-xs-12">
+                <input type="text" id="add_new_item" name="option[]" class="form-control" placeholder="Focus me">
+                <span class="input-group-addon  app-hand" id="add_new_btn"> <i class="fa fa-plus"></i> </span>
+            </div>
+        </div>
+    </div>
+</div>

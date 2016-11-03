@@ -1,0 +1,80 @@
+<form class="form-horizontal well">
+    <fieldset>
+        <legend class="text-center">
+            <%= MMC.tr('Quiz')%>
+        </legend>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="text"><%= MMC.tr('Text')%></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="text" id="text" placeholder="<%= MMC.tr('Text')%>" value="<%= text %>">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="explanation"><%= MMC.tr('Explanation')%></label>
+            <div class="col-sm-10">
+                <textarea  class="form-control" name="explanation" id="explanation" placeholder="<%= MMC.tr('Explanation')%>" ><%= explanation %></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label"><%= MMC.tr('Graduation')%></label>
+            <div class="col-sm-10">
+                <div class="text-center">
+                    <label class="col-sm-2 control-label" for="explanation"><%= MMC.tr('In grade')%></label>
+                    <input type="checkbox" checked="<%= in_grade %>" class="form-control" name="in-grade" id="in_grade">
+                </div>
+                <div class="form-group" id="graduation_time">
+                    <div class="col-sm-4">
+                        <label class="col-sm-12 control-label" for="explanation"><%= MMC.tr('Is Timed')%></label>
+                        <input type="checkbox" checked="<%= is_timed %>" class="form-control" name="is-timed" id="is_timed" placeholder="<%= MMC.tr('Explanation')%>" value="<%= explanation %>">
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="col-sm-12 control-label" for="is_timed"><%= MMC.tr('Note')%></label>
+                        <input type="text" disabled="disabled" class="form-control" name="note" id="note" placeholder="<%= MMC.tr('Note')%>" value="<%= note %>">
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="col-sm-12 control-label" for="max_attempts"><%= MMC.tr('Max Attempts')%></label>
+                        <input type="text" disabled="disabled" class="form-control" name="max-attempts" id="max_attempts" placeholder="<%= MMC.tr('Max Attempts')%>" value="<%= max_attempts %>">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% if (with_input) { %>checked="checked"<% } %>  class="btn btn-success pull-left" />
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="quiz_type"><%= MMC.tr('Display type')%></label>
+            <div class="col-sm-2">
+                <select class="form-control" name="display-type" id="display_type" placeholder="<%= MMC.tr('Display type')%>">
+                    <option value="0"> <%= MMC.tr('List')%> </option>
+                    <option value="1"> <%= MMC.tr('Slide')%> </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <label> <%= MMC.tr('Add empty field')%></label>
+                <button id="save" type="button" class="btn btn-success pull-left">
+                    Create
+                </button>
+                <button id="add_suggestion" class="btn btn-default" disabled="disabled">
+                    <%= MMC.tr('add')%> <%= MMC.tr('Choices')%>
+                </button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<div class="col-md-12">
+    <!-- documents file -->
+    <legend>
+        Choices
+    </legend>
+    <div class="row" id="quizz_responses">
+        <ul class="list-group" id="list_view">
+
+        </ul>
+        <div class="text-center" id="list_empty" style="display: none">
+            <%= MMC.tr('list is empty')%>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+{% load i18n %}
+{% load custom_tags %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>{% block fulltitle %}{% block title %}{% endblock %} / ميم {% endblock %}</title>
+        <link rel="home" title="Home" href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/app.css">
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/vender/guiders.css">
+        <link rel="stylesheet" type="text/css" href="ccss/common.css">
+        {% get_current_language as CURRENT %}
+        {% if CURRENT == "ar" %}
+        <link rel="stylesheet" type="text/css" href="{{ BASE_HOST_URL }}ccss/bootstrap-rtl.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ BASE_HOST_URL }}ccss/rtl-display.css">
+        {% else %}
+        <link rel="stylesheet" type="text/css" href="{{ BASE_HOST_URL }}ccss/ltr-display.css">
+        {% endif %}
+        <script>
+            __CONFIG__ = { {% get_student_js_global_vars %} ,
+                csrf : '{{ csrf_token }}',
+                STATIC_URL : '{{ STATIC_URL }}',
+                baseUrl : '/'
+            };
+        </script>
+        <!-- #FIXME  me nginx -->
+        {% block extrahead %}
+
+        {% endblock %}
+
+        <script src="{{ STATIC_URL }}js/config.js"></script>
+        <script src="{{ STATIC_URL }}js/vender/require/require.js" data-main="{{ STATIC_URL }}js/{% if not user.is_authenticated %}common{% else %}main{% endif %}/main.js"></script>
+        <script>
+            require([{{ STATIC_URL }} + "js/locale/" + __CONFIG__.locale + '.js']);
+        </script>
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/">
+
+        <script type="text/javascript">
+            if (window.location.hash == '#_=_') {
+                window.location.hash = '';
+            }
+        </script>
+    </head>
+
+    <body class="{% block pageid %}generic{% endblock %}">
+        {% include "header.html" %}
+        <div style="width:100%" id="body_container">
+
+            {% block content %}
+
+            {% endblock %}
+
+        </div>
+        {% include "footer.html" %}
+        {% block outside %} {% endblock %}
+        <!-- init -->
+        <script>
+            define('onLoad', ['app', 'guiders'], function(App) {
+                App.addInitializer(function() {
+                    var eventToTrigger = 'User:' + ({% if not user.is_authenticated %}'IsAnonymousUser'{% else %}'IsLoggedIn'{% endif %});
+                    App.vent.trigger(eventToTrigger, "{% autoescape off %}{{ userdata|escapejs }}{% endautoescape %}");
+                });
+            });
+
+        </script>
+
+    </body>
+
+</html>

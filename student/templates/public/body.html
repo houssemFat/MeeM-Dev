@@ -1,0 +1,101 @@
+
+{% load i18n %}
+<div style="color:red;background-color:white" class="showErrorMessage">{  errors }</div>
+<table width="100%" style="background-color:white;text-align:right">
+	<tr>
+		<td style="width:70%" valign="middle">
+			<form class="register" method="POST">
+				<table border="0">
+					<tr>
+						<td><label>{% trans "username" %}</label></td>
+						<td>
+							<input name="name" type="text" class="required" autocomplete='off'><span class="star-required">*</span>
+						</td>
+					</tr>
+					<tr>
+						<td><label>{% trans "email" %}</label></td>
+						<td>
+							<input name="emailaddress" type="text" class="required" value="" autocomplete='off'><span class="star-required">*</span>
+							
+						</td>
+					</tr>
+					
+					<tr>
+						<td><label>{% trans "password" %}</label></td>
+						<td>
+							<input name="password" type="password" class="required" ><span class="star-required">*</span>
+							<div style="display:inline-block" id="password_check_strong">
+								<div id="password_str_1" class='password-check' style="width:40px;height:5px;background-color:rgb(233, 227, 227);;display:inline-block;display:none" title="invalid">
+								</div>
+								<div id="password_str_2" class='password-check' style="width:40px;height:5px;background-color:red;display:inline-block;display:none" title="bad">
+								</div>
+								<div id="password_str_3"  class='password-check' style="width:40px;height:5px;background-color:orange;display:inline-block;display:none" title="weak">
+								</div>
+								<div id="password_str_4" class='password-check' style="width:40px;height:5px;background-color: rgb(238, 238, 8);display:inline-block;display:none" title="middle">
+								</div>
+								<div id="password_str_5" class='password-check' style="width:40px;height:5px;background-color: rgb(61, 233, 28);display:inline-block;display:none" title="good">
+								</div>
+								<div id="password_str_6" class='password-check' style="width:40px;height:5px;background-color: green;display:inline-block;display:none" title="strong">
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><label>{% trans "repassword" %}</label></td>
+						<td>
+							<input id="new_provider_re_password" type="password" class="required"/>
+						</td>
+					</tr>
+					<tr>
+						<td><label>{% trans "username" %}</label></td>
+						<td>
+							<input name="displayname" type="text">
+						</td>
+					</tr>
+					<tr>
+						<td><label>{% trans "age" %}</label></td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td >
+							<div id="captcha_img" style="width:300px;height:40px">
+								<img src='img.php?type=captcha&'/>
+							</div>
+						</td>
+						<td>
+							<input id="re_captcha_img"  type="button" value="{% trans "refresh" %}">
+							<input name="captcha" type="text" class="required" ><span class="star-required">*</span>
+						</td>
+						<td><label>{% trans "captcha_text" %}</label></td>
+						<td>
+							
+							<div id="errorMessage_captcha" class="errorMessage">{% trans "emptyFiel" %}</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+								<span class="star">*</span>
+								<label>{% trans "required" %}</label>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td align="right" colspan="2" style="padding:10px;">
+			<div class="policy-terms"> 
+				<span >{% trans "plociyCheckTerms" %}
+				<a href="help.php?topic=policy">{% trans "readPolicy" %}</a></span>
+				<input type="button"  id="accept_policy_error" class="hand" style="display:none ;border:0px;width:15px;height:15px;background-color:red"/>
+				<span id="errorBackground_accept_policy">
+					<input type="checkbox" name="accept_policy" id="accept_policy" class="hand required	"/></span>
+				<input type="button" id="submit_form"  class="regitser-btn hand" value="{% trans "save" %}"/>
+				<a style="color: rgb(128, 85, 38);text-decoration:none;padding:2px;margin-left:100px"  href="/connect.php">
+				{% trans "alreadyHaveAccount" %}</a>
+			</div>
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,78 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <%= common.tr('task')%>
+        </div>
+        <div class="modal-body">
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade active in" id="info">
+                    <!-- Sign In Form -->
+                    <!-- Text input-->
+                    <div class="control-group">
+                        <label class="control-label" for="event_title"><h3><span class="semi-bold"><%=common.tr("Title")%></span> &nbsp;<i class="fa fa fa-bookmark" style="color: " id="my_label"></i> &nbsp; </h3></label>
+                        <div class="controls">
+                            <input required="" id="event_title" name="event_title" type="text" class="form-control"  placeholder="<%=title%>" class="input-medium" required="">
+                        </div>
+                    </div>
+
+                    <!-- Password input-->
+                    <div class="control-group">
+                        <label class="control-label" ><h3><span class="semi-bold"><%=common.tr("Colors")%></span></h3></label>
+
+                        <br>
+                        <div class="col-lg-12 text-center">
+
+                            <!-- Standard gray button with gradient -->
+                            <div class="app-scheduler-event-color btn-default" data-color="ccc">
+                                &nbsp;
+                            </div>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <div class="app-scheduler-event-color btn-primary" data-color="3276b1">
+                                &nbsp;
+                            </div>
+                            <!-- Indicates a successful or positive action -->
+                            <div  class="app-scheduler-event-color btn-success" data-color="47a447">
+                                &nbsp;
+                            </div>
+                            <!-- Contextual button for informational alert messages -->
+                            <div  class="app-scheduler-event-color btn-info" data-color="39b3d7">
+                                &nbsp;
+                            </div>
+                            <!-- Indicates caution should be taken with this action -->
+                            <div class="app-scheduler-event-color btn-warning" data-color="ed9c28">
+                                &nbsp;
+                            </div>
+                            <!-- Indicates a dangerous or potentially negative action -->
+                            <div class="app-scheduler-event-color btn-danger" data-color="d2322d">
+                                &nbsp;
+                            </div>
+                            <!-- Indicates a dangerous or potentially negative action -->
+                            <div class="app-scheduler-event-color btn-white" data-color="ffffff">
+                                &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br>
+                    <p>
+                        <small>تشير الألوان على أهمية المهمة.</small>
+                    </p>
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <center>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <%=common.tr ('Close')%>
+                </button>
+                <button type="button" class="btn btn-default" id="confirm">
+                    <%=common.tr ('Save')%>
+                </button>
+            </center>
+        </div>
+    </div>
+</div>
